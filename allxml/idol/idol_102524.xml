@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Level>
+  <LevelInfo>
+    <BPM>118</BPM>
+    <BeatPerBar>4</BeatPerBar>
+    <BeatLen>16</BeatLen>
+    <EnterTimeAdjust>260</EnterTimeAdjust>
+    <NotePreShow>1</NotePreShow>
+    <LevelTime>152542</LevelTime>
+    <BarAmount>75</BarAmount>
+    <BeginBarLen>8</BeginBarLen>
+    <IsFourTrack>True</IsFourTrack>
+    <TrackCount>4</TrackCount>
+    <LevelPreTime>4000</LevelPreTime>
+  </LevelInfo>
+  <MusicInfo>
+    <Title>Candy</Title>
+    <Artist>Samuel</Artist>
+    <FilePath>audio/bgm/102524</FilePath>
+  </MusicInfo>
+  <SectionSeq>
+    <Section type="previous" endbar="0" mark="" param1="wutai_scene_pre_script_2" />
+    <Section type="begin" startbar="1" endbar="8" mark="" param1="wutai_scene_begin_script_2" />
+    <Section type="note" startbar="9" endbar="33" mark="" param1="" />
+    <Section type="showtime" startbar="34" endbar="37" mark="dance" param1="" />
+    <Section type="note" startbar="40" endbar="71" mark="" param1="" />
+    <Section type="showtime" startbar="72" endbar="75" mark="pose_xuanku" param1="" />
+  </SectionSeq>
+  <IndicatorResetPos PosNum="64" />
+  <NoteInfo>
+    <Normal>
+      <Note Bar="9" Pos="0" from_track="Left2" target_track="Left2" note_type="long" EndBar="9" EndPos="32" />
+      <Note Bar="9" Pos="48" from_track="Right2" target_track="Right2" note_type="short" />
+      <Note Bar="9" Pos="60" from_track="Right1" target_track="Right1" note_type="long" EndBar="10" EndPos="12" />
+      <Note Bar="10" Pos="32" from_track="Left1" target_track="Left1" note_type="short" />
+      <Note Bar="10" Pos="40" from_track="Left1" target_track="Left1" note_type="short" />
+      <Note Bar="11" Pos="0" from_track="Right2" target_track="Right2" note_type="short" />
+      <Note Bar="11" Pos="16" from_track="Left2" target_track="Left2" note_type="short" />
+      <Note Bar="11" Pos="32" from_track="Right1" target_track="Right1" note_type="long" EndBar="11" EndPos="48" />
+      <Note Bar="12" Pos="0" from_track="Left2" target_track="Left2" note_type="short" />
+      <Note Bar="12" Pos="16" from_track="Right2" target_track="Right2" note_type="short" />
+      <Note Bar="12" Pos="32" from_track="Left1" target_track="Left1" note_type="long" EndBar="12" EndPos="48" />
+      <Note Bar="13" Pos="0" from_track="Right2" target_track="Right2" note_type="long" EndBar="13" EndPos="32" />
+      <Note Bar="13" Pos="48" from_track="Left2" target_track="Left2" note_type="short" />
+      <Note Bar="13" Pos="60" from_track="Left1" target_track="Left1" note_type="long" EndBar="14" EndPos="12" />
+      <Note Bar="14" Pos="32" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="14" Pos="40" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="15" Pos="0" from_track="Left2" target_track="Left2" note_type="short" />
+      <Note Bar="15" Pos="16" from_track="Right2" target_track="Right2" note_type="short" />
+      <Note Bar="15" Pos="32" from_track="Left1" target_track="Left1" note_type="long" EndBar="15" EndPos="48" />
+      <Note Bar="16" Pos="0" from_track="Right2" target_track="Right2" note_type="short" />
+      <Note Bar="16" Pos="16" from_track="Left2" target_track="Left2" note_type="short" />
+      <Note Bar="16" Pos="32" from_track="Right1" target_track="Right1" note_type="long" EndBar="16" EndPos="48" />
+      <Note Bar="17" Pos="0" from_track="Left2" target_track="Left2" note_type="short" />
+      <Note Bar="17" Pos="16" from_track="Left1" target_track="Left1" note_type="short" />
+      <Note Bar="17" Pos="32" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="17" Pos="48" target_track="Right2" end_track="Right1" note_type="slip" />
+      <Note Bar="18" Pos="0" from_track="Left1" target_track="Left1" note_type="long" EndBar="18" EndPos="16" />
+      <Note Bar="18" Pos="32" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="18" Pos="40" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="18" Pos="48" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="19" Pos="0" from_track="Left2" target_track="Left2" note_type="long" EndBar="19" EndPos="16" />
+      <Note Bar="19" Pos="32" from_track="Right2" target_track="Right2" note_type="short" />
+      <Note Bar="19" Pos="40" from_track="Right2" target_track="Right2" note_type="short" />
+      <Note Bar="19" Pos="48" from_track="Right2" target_track="Right2" note_type="short" />
+      <Note Bar="20" Pos="0" from_track="Left2" target_track="Left2" note_type="short" />
+      <Note Bar="20" Pos="16" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="20" Pos="32" from_track="Left1" target_track="Left1" note_type="short" />
+      <Note Bar="20" Pos="48" from_track="Right2" target_track="Right2" note_type="short" />
+      <Note Bar="21" Pos="0" from_track="Left2" target_track="Left2" note_type="long" EndBar="21" EndPos="16" />
+      <Note Bar="21" Pos="32" from_track="Left1" target_track="Left1" note_type="long" EndBar="21" EndPos="48" />
+      <Note Bar="22" Pos="0" from_track="Right1" target_track="Right1" note_type="long" EndBar="22" EndPos="16" />
+      <Note Bar="22" Pos="32" from_track="Left1" target_track="Left1" note_type="short" />
+      <Note Bar="22" Pos="40" from_track="Left1" target_track="Left1" note_type="short" />
+      <Note Bar="22" Pos="48" from_track="Left1" target_track="Left1" note_type="short" />
+      <Note Bar="23" Pos="0" from_track="Right2" target_track="Right2" note_type="long" EndBar="23" EndPos="16" />
+      <Note Bar="23" Pos="32" from_track="Left2" target_track="Left2" note_type="short" />
+      <Note Bar="23" Pos="40" from_track="Left2" target_track="Left2" note_type="short" />
+      <Note Bar="23" Pos="48" from_track="Left2" target_track="Left2" note_type="short" />
+      <Note Bar="24" Pos="0" from_track="Right2" target_track="Right2" note_type="short" />
+      <Note Bar="24" Pos="16" from_track="Left1" target_track="Left1" note_type="short" />
+      <Note Bar="24" Pos="32" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="24" Pos="48" from_track="Left2" target_track="Left2" note_type="short" />
+      <Note Bar="25" Pos="0" from_track="Right2" target_track="Right2" note_type="long" EndBar="25" EndPos="16" />
+      <Note Bar="25" Pos="32" from_track="Right1" target_track="Right1" note_type="long" EndBar="25" EndPos="48" />
+      <Note Bar="26" Pos="0" target_track="Left2" end_track="Left1" note_type="slip" />
+      <Note Bar="26" Pos="16" from_track="Right2" target_track="Right2" note_type="short" />
+      <Note Bar="26" Pos="24" from_track="Left1" target_track="Left1" note_type="short" />
+      <Note Bar="26" Pos="32" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="26" Pos="48" from_track="Left2" target_track="Left2" note_type="short" />
+      <Note Bar="26" Pos="56" from_track="Left2" target_track="Left2" note_type="long" EndBar="27" EndPos="8" />
+      <Note Bar="27" Pos="32" target_track="Right2" end_track="Right1" note_type="slip" />
+      <Note Bar="27" Pos="48" from_track="Left1" target_track="Left1" note_type="short" />
+      <Note Bar="27" Pos="56" from_track="Right1" target_track="Right1" note_type="long" EndBar="28" EndPos="8" />
+      <Note Bar="28" Pos="32" from_track="Left2" target_track="Left2" note_type="short" />
+      <Note Bar="28" Pos="48" from_track="Left1" target_track="Left1" note_type="short" />
+      <Note Bar="29" Pos="0" from_track="Right1" target_track="Right1" note_type="long" EndBar="29" EndPos="14" />
+      <Note Bar="29" Pos="16" from_track="Left2" target_track="Left2" note_type="long" EndBar="29" EndPos="30" />
+      <Note Bar="29" Pos="32" from_track="Right2" target_track="Right2" note_type="long" EndBar="29" EndPos="48" />
+      <Note Bar="30" Pos="0" target_track="Right2" end_track="Right1" note_type="slip" />
+      <Note Bar="30" Pos="16" from_track="Left2" target_track="Left2" note_type="short" />
+      <Note Bar="30" Pos="24" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="30" Pos="32" from_track="Left1" target_track="Left1" note_type="short" />
+      <Note Bar="30" Pos="48" from_track="Right2" target_track="Right2" note_type="short" />
+      <Note Bar="30" Pos="56" from_track="Right2" target_track="Right2" note_type="long" EndBar="31" EndPos="8" />
+      <Note Bar="31" Pos="32" target_track="Left2" end_track="Left1" note_type="slip" />
+      <Note Bar="31" Pos="48" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="31" Pos="56" from_track="Left1" target_track="Left1" note_type="long" EndBar="32" EndPos="8" />
+      <Note Bar="32" Pos="32" from_track="Right2" target_track="Right2" note_type="short" />
+      <Note Bar="32" Pos="48" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="33" Pos="0" from_track="Left1" target_track="Left1" note_type="long" EndBar="33" EndPos="14" />
+      <Note Bar="33" Pos="16" from_track="Right2" target_track="Right2" note_type="long" EndBar="33" EndPos="30" />
+      <Note Bar="33" Pos="32" from_track="Left2" target_track="Left2" note_type="long" EndBar="33" EndPos="48" />
+      <Note Bar="34" Pos="0" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="40" Pos="0" from_track="Left1" target_track="Right2" note_type="long" EndBar="40" EndPos="16" />
+      <CombineNote>
+        <Note Bar="40" Pos="32" from_track="Left1" target_track="Left1" note_type="long" EndBar="40" EndPos="48" />
+        <Note Bar="40" Pos="48" target_track="Left1" end_track="Left2" note_type="slip" />
+        <Note Bar="40" Pos="48" from_track="Left2" target_track="Left2" note_type="long" EndBar="41" EndPos="0" />
+        <Note Bar="41" Pos="0" target_track="Left2" end_track="Left1" note_type="slip" />
+        <Note Bar="41" Pos="0" from_track="Left1" target_track="Left1" note_type="long" EndBar="41" EndPos="16" />
+      </CombineNote>
+      <Note Bar="41" Pos="32" from_track="Left2" target_track="Right2" note_type="short" />
+      <Note Bar="41" Pos="32" from_track="Right2" target_track="Left2" note_type="short" />
+      <Note Bar="41" Pos="48" from_track="Left1" target_track="Left1" note_type="short" />
+      <Note Bar="41" Pos="56" from_track="Left1" target_track="Left1" note_type="short" />
+      <Note Bar="42" Pos="0" from_track="Right1" target_track="Right1" note_type="long" EndBar="42" EndPos="16" />
+      <Note Bar="42" Pos="32" from_track="Right2" target_track="Left2" note_type="short" />
+      <Note Bar="42" Pos="48" from_track="Right2" target_track="Left1" note_type="short" />
+      <Note Bar="43" Pos="0" from_track="Right2" target_track="Right1" note_type="short" />
+      <Note Bar="43" Pos="16" from_track="Right2" target_track="Right2" note_type="short" />
+      <Note Bar="43" Pos="32" from_track="Left2" target_track="Left2" note_type="short" />
+      <Note Bar="43" Pos="40" from_track="Left2" target_track="Left2" note_type="short" />
+      <Note Bar="43" Pos="48" from_track="Left2" target_track="Left2" note_type="short" />
+      <Note Bar="44" Pos="0" from_track="Right1" target_track="Right1" note_type="short" />
+      <CombineNote>
+        <Note Bar="44" Pos="16" from_track="Right2" target_track="Right2" note_type="long" EndBar="44" EndPos="32" />
+        <Note Bar="44" Pos="32" target_track="Right2" end_track="Right1" note_type="slip" />
+        <Note Bar="44" Pos="32" from_track="Right1" target_track="Right1" note_type="long" EndBar="44" EndPos="48" />
+      </CombineNote>
+      <Note Bar="45" Pos="0" from_track="Left2" target_track="Left2" note_type="short" />
+      <Note Bar="45" Pos="16" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="45" Pos="32" from_track="Left1" target_track="Left1" note_type="short" />
+      <Note Bar="45" Pos="48" from_track="Right2" target_track="Right2" note_type="short" />
+      <Note Bar="45" Pos="56" from_track="Right2" target_track="Right2" note_type="short" />
+      <Note Bar="46" Pos="0" from_track="Left2" target_track="Left2" note_type="long" EndBar="46" EndPos="16" />
+      <Note Bar="46" Pos="32" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="46" Pos="48" from_track="Right2" target_track="Right2" note_type="short" />
+      <Note Bar="47" Pos="0" from_track="Left1" target_track="Left1" note_type="short" />
+      <Note Bar="47" Pos="8" from_track="Left1" target_track="Left1" note_type="short" />
+      <CombineNote>
+        <Note Bar="47" Pos="16" from_track="Left1" target_track="Left1" note_type="long" EndBar="47" EndPos="40" />
+        <Note Bar="47" Pos="40" target_track="Left1" end_track="Left2" note_type="slip" />
+      </CombineNote>
+      <Note Bar="48" Pos="0" from_track="Left2" target_track="Right2" note_type="long" EndBar="48" EndPos="14" />
+      <Note Bar="48" Pos="16" from_track="Right2" target_track="Left2" note_type="long" EndBar="48" EndPos="30" />
+      <Note Bar="48" Pos="32" from_track="Left2" target_track="Right1" note_type="long" EndBar="48" EndPos="46" />
+      <Note Bar="48" Pos="48" from_track="Right2" target_track="Left1" note_type="long" EndBar="48" EndPos="62" />
+      <CombineNote>
+        <Note Bar="49" Pos="32" from_track="Right1" target_track="Right1" note_type="long" EndBar="49" EndPos="48" />
+        <Note Bar="49" Pos="48" target_track="Right1" end_track="Right2" note_type="slip" />
+        <Note Bar="49" Pos="48" from_track="Right2" target_track="Right2" note_type="long" EndBar="50" EndPos="0" />
+        <Note Bar="50" Pos="0" target_track="Right2" end_track="Right1" note_type="slip" />
+        <Note Bar="50" Pos="0" from_track="Right1" target_track="Right1" note_type="long" EndBar="50" EndPos="32" />
+      </CombineNote>
+      <Note Bar="50" Pos="0" from_track="Left1" target_track="Left2" note_type="long" EndBar="50" EndPos="32" />
+      <Note Bar="50" Pos="48" from_track="Left1" target_track="Left1" note_type="short" />
+      <Note Bar="50" Pos="60" from_track="Left1" target_track="Left1" note_type="long" EndBar="51" EndPos="12" />
+      <Note Bar="51" Pos="32" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="51" Pos="40" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="52" Pos="0" from_track="Right2" target_track="Left2" note_type="short" />
+      <Note Bar="52" Pos="0" from_track="Left2" target_track="Right2" note_type="short" />
+      <Note Bar="52" Pos="16" from_track="Left1" target_track="Left1" note_type="short" />
+      <Note Bar="52" Pos="32" from_track="Right1" target_track="Right1" note_type="long" EndBar="52" EndPos="48" />
+      <Note Bar="53" Pos="0" from_track="Right2" target_track="Left2" note_type="short" />
+      <Note Bar="53" Pos="0" from_track="Left2" target_track="Right2" note_type="short" />
+      <Note Bar="53" Pos="16" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="53" Pos="32" from_track="Left1" target_track="Left1" note_type="long" EndBar="53" EndPos="48" />
+      <Note Bar="54" Pos="0" from_track="Right2" target_track="Right2" note_type="long" EndBar="54" EndPos="32" />
+      <Note Bar="54" Pos="48" from_track="Left2" target_track="Left2" note_type="short" />
+      <Note Bar="54" Pos="60" from_track="Left1" target_track="Left1" note_type="long" EndBar="55" EndPos="12" />
+      <Note Bar="55" Pos="32" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="55" Pos="40" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="56" Pos="0" from_track="Left2" target_track="Right2" note_type="short" />
+      <Note Bar="56" Pos="0" from_track="Right2" target_track="Left2" note_type="short" />
+      <Note Bar="56" Pos="16" from_track="Left2" target_track="Right1" note_type="short" />
+      <Note Bar="56" Pos="16" from_track="Right2" target_track="Left1" note_type="short" />
+      <Note Bar="56" Pos="32" from_track="Left2" target_track="Left2" note_type="long" EndBar="56" EndPos="48" />
+      <Note Bar="57" Pos="0" from_track="Right2" target_track="Left2" note_type="short" />
+      <Note Bar="57" Pos="0" from_track="Left2" target_track="Right2" note_type="short" />
+      <Note Bar="57" Pos="16" from_track="Left2" target_track="Right1" note_type="short" />
+      <Note Bar="57" Pos="16" from_track="Right2" target_track="Left1" note_type="short" />
+      <Note Bar="57" Pos="32" from_track="Right2" target_track="Right2" note_type="long" EndBar="57" EndPos="48" />
+      <Note Bar="58" Pos="0" target_track="Left2" end_track="Left1" note_type="slip" />
+      <Note Bar="58" Pos="16" from_track="Right2" target_track="Right2" note_type="short" />
+      <Note Bar="58" Pos="24" from_track="Left1" target_track="Left1" note_type="short" />
+      <Note Bar="58" Pos="32" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="58" Pos="48" from_track="Right2" target_track="Left2" note_type="short" />
+      <Note Bar="58" Pos="56" from_track="Right2" target_track="Left2" note_type="long" EndBar="59" EndPos="8" />
+      <Note Bar="59" Pos="32" target_track="Right2" end_track="Right1" note_type="slip" />
+      <Note Bar="59" Pos="48" from_track="Left1" target_track="Left1" note_type="short" />
+      <Note Bar="59" Pos="56" from_track="Right1" target_track="Right1" note_type="long" EndBar="60" EndPos="8" />
+      <Note Bar="60" Pos="32" from_track="Right2" target_track="Left2" note_type="short" />
+      <Note Bar="60" Pos="32" from_track="Left2" target_track="Right2" note_type="short" />
+      <Note Bar="60" Pos="48" from_track="Left1" target_track="Left1" note_type="short" />
+      <Note Bar="61" Pos="0" from_track="Left2" target_track="Right1" note_type="long" EndBar="61" EndPos="14" />
+      <Note Bar="61" Pos="16" from_track="Right2" target_track="Left2" note_type="long" EndBar="61" EndPos="30" />
+      <Note Bar="61" Pos="32" from_track="Left2" target_track="Right2" note_type="long" EndBar="61" EndPos="48" />
+      <Note Bar="62" Pos="0" target_track="Right2" end_track="Right1" note_type="slip" />
+      <Note Bar="62" Pos="16" from_track="Left2" target_track="Left2" note_type="short" />
+      <Note Bar="62" Pos="24" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="62" Pos="32" from_track="Left1" target_track="Left1" note_type="short" />
+      <Note Bar="62" Pos="48" from_track="Left2" target_track="Right2" note_type="short" />
+      <Note Bar="62" Pos="56" from_track="Left2" target_track="Right2" note_type="long" EndBar="63" EndPos="8" />
+      <Note Bar="63" Pos="32" target_track="Left2" end_track="Left1" note_type="slip" />
+      <Note Bar="63" Pos="48" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="63" Pos="56" from_track="Left1" target_track="Left1" note_type="long" EndBar="64" EndPos="8" />
+      <Note Bar="64" Pos="32" from_track="Right2" target_track="Left2" note_type="short" />
+      <Note Bar="64" Pos="32" from_track="Left2" target_track="Right2" note_type="short" />
+      <Note Bar="64" Pos="48" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="65" Pos="0" from_track="Right2" target_track="Left1" note_type="long" EndBar="65" EndPos="14" />
+      <Note Bar="65" Pos="16" from_track="Left2" target_track="Right2" note_type="long" EndBar="65" EndPos="30" />
+      <Note Bar="65" Pos="32" from_track="Right2" target_track="Left2" note_type="long" EndBar="65" EndPos="48" />
+      <Note Bar="66" Pos="0" from_track="Left1" target_track="Right1" note_type="long" EndBar="66" EndPos="32" />
+      <Note Bar="66" Pos="40" from_track="Left2" target_track="Left2" note_type="short" />
+      <CombineNote>
+        <Note Bar="66" Pos="48" from_track="Left2" target_track="Left2" note_type="long" EndBar="67" EndPos="0" />
+        <Note Bar="67" Pos="0" target_track="Left2" end_track="Left1" note_type="slip" />
+        <Note Bar="67" Pos="0" from_track="Left1" target_track="Left1" note_type="long" EndBar="67" EndPos="32" />
+        <Note Bar="67" Pos="32" target_track="Left1" end_track="Left2" note_type="slip" />
+        <Note Bar="67" Pos="32" from_track="Left2" target_track="Left2" note_type="long" EndBar="68" EndPos="0" />
+      </CombineNote>
+      <Note Bar="68" Pos="8" from_track="Right2" target_track="Right2" note_type="short" />
+      <Note Bar="68" Pos="16" from_track="Right1" target_track="Right1" note_type="short" />
+      <Note Bar="68" Pos="32" from_track="Left2" target_track="Left2" note_type="short" />
+      <Note Bar="68" Pos="40" from_track="Left1" target_track="Left1" note_type="short" />
+      <Note Bar="68" Pos="56" from_track="Right1" target_track="Right1" note_type="short" />
+      <CombineNote>
+        <Note Bar="69" Pos="0" from_track="Right1" target_track="Right1" note_type="long" EndBar="69" EndPos="24" />
+        <Note Bar="69" Pos="24" target_track="Right1" end_track="Right2" note_type="slip" />
+        <Note Bar="69" Pos="24" from_track="Right2" target_track="Right2" note_type="long" EndBar="69" EndPos="48" />
+      </CombineNote>
+      <Note Bar="70" Pos="0" from_track="Left1" target_track="Right1" note_type="long" EndBar="70" EndPos="32" />
+      <Note Bar="70" Pos="40" from_track="Left2" target_track="Left2" note_type="short" />
+      <CombineNote>
+        <Note Bar="70" Pos="48" from_track="Left2" target_track="Left2" note_type="long" EndBar="71" EndPos="0" />
+        <Note Bar="71" Pos="0" target_track="Left2" end_track="Left1" note_type="slip" />
+        <Note Bar="71" Pos="0" from_track="Left1" target_track="Left1" note_type="long" EndBar="71" EndPos="32" />
+        <Note Bar="71" Pos="32" target_track="Left1" end_track="Left2" note_type="slip" />
+        <Note Bar="71" Pos="32" from_track="Left2" target_track="Left2" note_type="long" EndBar="71" EndPos="62" />
+      </CombineNote>
+      <Note Bar="72" Pos="0" from_track="Right2" target_track="Right2" note_type="short" />
+    </Normal>
+  </NoteInfo>
+  <ActionSeq type="1">
+    <ActionList start_bar="9" dance_len="1" seq_len="4" level="2" type="" />
+    <ActionList start_bar="13" dance_len="2" seq_len="4" level="2" type="" />
+    <ActionList start_bar="17" dance_len="1" seq_len="1" level="2" type="" />
+    <ActionList start_bar="18" dance_len="2" seq_len="4" level="2" type="" />
+    <ActionList start_bar="22" dance_len="2" seq_len="4" level="2" type="" />
+    <ActionList start_bar="26" dance_len="2" seq_len="8" level="2" type="" />
+    <ActionList start_bar="34" dance_len="4" seq_len="4" level="2" type="" />
+    <ActionList start_bar="38" dance_len="1" seq_len="4" level="2" type="" />
+    <ActionList start_bar="42" dance_len="2" seq_len="4" level="2" type="" />
+    <ActionList start_bar="46" dance_len="2" seq_len="4" level="2" type="" />
+    <ActionList start_bar="50" dance_len="2" seq_len="8" level="2" type="" />
+    <ActionList start_bar="58" dance_len="2" seq_len="8" level="2" type="" />
+    <ActionList start_bar="66" dance_len="2" seq_len="4" level="2" type="" />
+    <ActionList start_bar="70" dance_len="2" seq_len="2" level="2" type="" />
+    <ActionList start_bar="72" dance_len="4" seq_len="4" level="2" type="" />
+  </ActionSeq>
+  <CameraSeq>
+    <Camera name="NL" bar="9" pos="0" end_bar="11" end_pos="0" />
+    <Camera name="YAOBI_UD_RIGHT" bar="11" pos="0" end_bar="13" end_pos="0" />
+    <Camera name="NR" bar="13" pos="0" end_bar="15" end_pos="0" />
+    <Camera name="YAOBI_UD_LEFT" bar="15" pos="0" end_bar="17" end_pos="0" />
+    <Camera name="TC" bar="17" pos="0" end_bar="18" end_pos="0" />
+    <Camera name="YAOBI_RL_05" bar="18" pos="0" end_bar="22" end_pos="0" />
+    <Camera name="YAOBI_NF_01" bar="22" pos="0" end_bar="26" end_pos="0" />
+    <Camera name="YAOBI_LR_07" bar="26" pos="0" end_bar="29" end_pos="0" />
+    <Camera name="FC" bar="29" pos="0" end_bar="30" end_pos="0" />
+    <Camera name="YAOBI_RL_03" bar="30" pos="0" end_bar="33" end_pos="0" />
+    <Camera name="TC" bar="33" pos="0" end_bar="34" end_pos="0" />
+    <Camera name="NC" bar="34" pos="0" end_bar="38" end_pos="0" />
+    <Camera name="SC" bar="38" pos="0" end_bar="40" end_pos="0" />
+    <Camera name="YAOBI_NF_06" bar="40" pos="0" end_bar="42" end_pos="0" />
+    <Camera name="YAOBI_RL_02" bar="42" pos="0" end_bar="45" end_pos="0" />
+    <Camera name="YAOBI_NF_01" bar="45" pos="0" end_bar="48" end_pos="0" />
+    <Camera name="NL" bar="48" pos="0" end_bar="50" end_pos="0" />
+    <Camera name="SC" bar="50" pos="0" end_bar="52" end_pos="0" />
+    <Camera name="YAOBI_RL_01" bar="52" pos="0" end_bar="54" end_pos="0" />
+    <Camera name="SL" bar="54" pos="0" end_bar="56" end_pos="0" />
+    <Camera name="YAOBI_NF_07" bar="56" pos="0" end_bar="58" end_pos="0" />
+    <Camera name="YAOBI_LR_06" bar="58" pos="0" end_bar="61" end_pos="0" />
+    <Camera name="NC" bar="61" pos="0" end_bar="62" end_pos="0" />
+    <Camera name="YAOBI_RL_09" bar="62" pos="0" end_bar="65" end_pos="0" />
+    <Camera name="BR" bar="65" pos="0" end_bar="66" end_pos="0" />
+    <Camera name="YAOBI_NF_06" bar="66" pos="0" end_bar="68" end_pos="0" />
+    <Camera name="SC" bar="68" pos="0" end_bar="70" end_pos="0" />
+    <Camera name="YAOBI_NF_07" bar="70" pos="0" end_bar="72" end_pos="0" />
+    <Camera name="NC" bar="72" pos="0" end_bar="76" end_pos="0" />
+  </CameraSeq>
+  <DancerSort>
+    <Bar>15</Bar>
+    <Bar>17</Bar>
+    <Bar>18</Bar>
+    <Bar>20</Bar>
+    <Bar>22</Bar>
+    <Bar>24</Bar>
+    <Bar>26</Bar>
+    <Bar>28</Bar>
+    <Bar>30</Bar>
+    <Bar>32</Bar>
+    <Bar>40</Bar>
+    <Bar>41</Bar>
+    <Bar>42</Bar>
+    <Bar>44</Bar>
+    <Bar>46</Bar>
+    <Bar>48</Bar>
+    <Bar>50</Bar>
+    <Bar>52</Bar>
+    <Bar>54</Bar>
+    <Bar>56</Bar>
+    <Bar>58</Bar>
+    <Bar>60</Bar>
+    <Bar>62</Bar>
+    <Bar>64</Bar>
+    <Bar>66</Bar>
+    <Bar>68</Bar>
+    <Bar>70</Bar>
+  </DancerSort>
+  <StageEffectSeq>
+    <effect name="wutai_scene_global_script" bar="-1" length="-1" />
+    <effect name="wutai_scene_note_biaozhun_01" bar="9" length="25" />
+    <effect name="wutai_scene_note_biaozhun_01" bar="38" length="34" />
+    <effect name="wutai_scene_note_biaozhun_01" bar="76" length="-1" />
+  </StageEffectSeq>
+</Level>

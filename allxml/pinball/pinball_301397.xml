@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Level>
+  <LevelInfo>
+    <BPM>150.0</BPM>
+    <BeatPerBar>4</BeatPerBar>
+    <BeatLen>16</BeatLen>
+    <EnterTimeAdjust>73</EnterTimeAdjust>
+    <NotePreShow>1.0</NotePreShow>
+    <LevelTime>156800</LevelTime>
+    <BarAmount>98</BarAmount>
+    <BeginBarLen>8</BeginBarLen>
+    <IsFourTrack>False</IsFourTrack>
+    <TrackCount>5</TrackCount>
+    <LevelPreTime>4000</LevelPreTime>
+  </LevelInfo>
+  <MusicInfo>
+    <Title>江湖</Title>
+    <Artist>许嵩</Artist>
+    <FilePath>audio/bgm/101397</FilePath>
+  </MusicInfo>
+  <SectionSeq>
+    <Section type="previous" endbar="0" mark="" param1="wutai_scene_pre_script_2" />
+    <Section type="begin" startbar="1" endbar="8" mark="" param1="wutai_scene_begin_script_2" />
+    <Section type="note" startbar="9" endbar="44" mark="" param1="" />
+    <Section type="showtime" startbar="45" endbar="48" mark="dance" param1="" />
+    <Section type="note" startbar="51" endbar="94" mark="" param1="" />
+    <Section type="showtime" startbar="95" endbar="98" mark="pose_youyu" param1="" />
+  </SectionSeq>
+  <IndicatorResetPos PosNum="64" />
+  <NoteInfo>
+    <Normal>
+      <Note ID="1" note_type="PinballSingle" Bar="9" Pos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="2" note_type="PinballLong" Bar="9" Pos="16" EndBar="9" EndPos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="3" note_type="PinballSingle" Bar="9" Pos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="4" note_type="PinballLong" Bar="9" Pos="48" EndBar="10" EndPos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="5" note_type="PinballSlip" Bar="10" Pos="0" Son="9" EndArea="3|4" MoveTime="3" />
+      <Note ID="6" note_type="PinballLong" Bar="10" Pos="32" EndBar="10" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="7" note_type="PinballSingle" Bar="11" Pos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="8" note_type="PinballLong" Bar="11" Pos="16" EndBar="11" EndPos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="9" note_type="PinballSlip" Bar="11" Pos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="10" note_type="PinballLong" Bar="11" Pos="48" EndBar="12" EndPos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="11" note_type="PinballSingle" Bar="12" Pos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="12" note_type="PinballLong" Bar="12" Pos="32" EndBar="12" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="13" note_type="PinballLong" Bar="13" Pos="0" EndBar="13" EndPos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="14" note_type="PinballSingle" Bar="13" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="15" note_type="PinballSlip" Bar="13" Pos="32" Son="20" EndArea="3|4" MoveTime="3" />
+      <Note ID="16" note_type="PinballLong" Bar="14" Pos="0" EndBar="14" EndPos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="17" note_type="PinballSingle" Bar="14" Pos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="18" note_type="PinballSlip" Bar="14" Pos="32" Son="24" EndArea="1|2" MoveTime="3" />
+      <Note ID="19" note_type="PinballSingle" Bar="14" Pos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="20" note_type="PinballSlip" Bar="15" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="21" note_type="PinballLong" Bar="15" Pos="16" EndBar="15" EndPos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="22" note_type="PinballSingle" Bar="15" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="23" note_type="PinballLong" Bar="15" Pos="48" EndBar="16" EndPos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="24" note_type="PinballSlip" Bar="16" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="25" note_type="PinballLong" Bar="16" Pos="16" EndBar="16" EndPos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="26" note_type="PinballLong" Bar="16" Pos="32" EndBar="16" EndPos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="27" note_type="PinballSingle" Bar="17" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="28" note_type="PinballLong" Bar="17" Pos="16" EndBar="17" EndPos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="29" note_type="PinballSingle" Bar="17" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="30" note_type="PinballLong" Bar="17" Pos="48" EndBar="18" EndPos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="31" note_type="PinballSlip" Bar="18" Pos="0" Son="35" EndArea="1|2" MoveTime="3" />
+      <Note ID="32" note_type="PinballLong" Bar="18" Pos="32" EndBar="18" EndPos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="33" note_type="PinballSingle" Bar="19" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="34" note_type="PinballLong" Bar="19" Pos="16" EndBar="19" EndPos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="35" note_type="PinballSlip" Bar="19" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="36" note_type="PinballLong" Bar="19" Pos="48" EndBar="20" EndPos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="37" note_type="PinballSingle" Bar="20" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="38" note_type="PinballLong" Bar="20" Pos="32" EndBar="20" EndPos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="39" note_type="PinballLong" Bar="21" Pos="0" EndBar="21" EndPos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="40" note_type="PinballSingle" Bar="21" Pos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="41" note_type="PinballSlip" Bar="21" Pos="32" Son="46" EndArea="1|2" MoveTime="3" />
+      <Note ID="42" note_type="PinballLong" Bar="22" Pos="0" EndBar="22" EndPos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="43" note_type="PinballSingle" Bar="22" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="44" note_type="PinballSlip" Bar="22" Pos="32" Son="50" EndArea="3|4" MoveTime="3" />
+      <Note ID="45" note_type="PinballSingle" Bar="22" Pos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="46" note_type="PinballSlip" Bar="23" Pos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="47" note_type="PinballLong" Bar="23" Pos="16" EndBar="23" EndPos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="48" note_type="PinballSingle" Bar="23" Pos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="49" note_type="PinballLong" Bar="23" Pos="48" EndBar="24" EndPos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="50" note_type="PinballSlip" Bar="24" Pos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="51" note_type="PinballLong" Bar="24" Pos="16" EndBar="24" EndPos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="52" note_type="PinballLong" Bar="24" Pos="32" EndBar="24" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="53" note_type="PinballSlip" Bar="25" Pos="0" Son="60" EndArea="3|4" MoveTime="3" />
+      <Note ID="54" note_type="PinballSingle" Bar="25" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="55" note_type="PinballLong" Bar="25" Pos="32" EndBar="25" EndPos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="56" note_type="PinballSingle" Bar="25" Pos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="57" note_type="PinballSingle" Bar="26" Pos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="58" note_type="PinballSingle" Bar="26" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="59" note_type="PinballSingle" Bar="26" Pos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="60" note_type="PinballSlip" Bar="26" Pos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="61" note_type="PinballLong" Bar="26" Pos="48" EndBar="27" EndPos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="62" note_type="PinballSeries" Bar="27" Pos="0" Son="63" EndArea="1|2" MoveTime="3" />
+      <Note ID="63" note_type="PinballSeries" Bar="27" Pos="8" Son="64" EndArea="1|2" MoveTime="3" />
+      <Note ID="64" note_type="PinballSeries" Bar="27" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="65" note_type="PinballLong" Bar="27" Pos="32" EndBar="27" EndPos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="66" note_type="PinballSingle" Bar="27" Pos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="67" note_type="PinballSingle" Bar="28" Pos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="68" note_type="PinballSingle" Bar="28" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="69" note_type="PinballLong" Bar="28" Pos="32" EndBar="28" EndPos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="70" note_type="PinballSlip" Bar="29" Pos="0" Son="77" EndArea="1|2" MoveTime="3" />
+      <Note ID="71" note_type="PinballSingle" Bar="29" Pos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="72" note_type="PinballLong" Bar="29" Pos="32" EndBar="29" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="73" note_type="PinballSingle" Bar="29" Pos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="74" note_type="PinballSingle" Bar="30" Pos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="75" note_type="PinballSingle" Bar="30" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="76" note_type="PinballSingle" Bar="30" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="77" note_type="PinballSlip" Bar="30" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="78" note_type="PinballLong" Bar="30" Pos="48" EndBar="31" EndPos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="79" note_type="PinballSeries" Bar="31" Pos="0" Son="80" EndArea="3|4" MoveTime="3" />
+      <Note ID="80" note_type="PinballSeries" Bar="31" Pos="8" Son="81" EndArea="3|4" MoveTime="3" />
+      <Note ID="81" note_type="PinballSeries" Bar="31" Pos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="82" note_type="PinballLong" Bar="31" Pos="32" EndBar="31" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="83" note_type="PinballSingle" Bar="31" Pos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="84" note_type="PinballSingle" Bar="32" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="85" note_type="PinballSingle" Bar="32" Pos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="86" note_type="PinballLong" Bar="32" Pos="32" EndBar="32" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="87" note_type="PinballLong" Bar="33" Pos="0" EndBar="33" EndPos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="88" note_type="PinballSingle" Bar="33" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="89" note_type="PinballSlip" Bar="33" Pos="32" Son="95" EndArea="1|2" MoveTime="3" />
+      <Note ID="90" note_type="PinballSingle" Bar="33" Pos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="91" note_type="PinballLong" Bar="34" Pos="0" EndBar="34" EndPos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="92" note_type="PinballSingle" Bar="34" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="93" note_type="PinballSingle" Bar="34" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="94" note_type="PinballLong" Bar="34" Pos="32" EndBar="34" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="95" note_type="PinballSlip" Bar="35" Pos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="96" note_type="PinballSingle" Bar="35" Pos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="97" note_type="PinballSingle" Bar="35" Pos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="98" note_type="PinballSingle" Bar="35" Pos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="99" note_type="PinballLong" Bar="36" Pos="0" EndBar="36" EndPos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="100" note_type="PinballSingle" Bar="36" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="101" note_type="PinballLong" Bar="37" Pos="0" EndBar="37" EndPos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="102" note_type="PinballSingle" Bar="37" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="103" note_type="PinballSingle" Bar="37" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="104" note_type="PinballLong" Bar="37" Pos="32" EndBar="37" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="105" note_type="PinballSingle" Bar="37" Pos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="106" note_type="PinballSingle" Bar="38" Pos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="107" note_type="PinballSingle" Bar="38" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="108" note_type="PinballSingle" Bar="38" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="109" note_type="PinballLong" Bar="38" Pos="32" EndBar="38" EndPos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="110" note_type="PinballSingle" Bar="38" Pos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="111" note_type="PinballLong" Bar="39" Pos="0" EndBar="39" EndPos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="112" note_type="PinballSingle" Bar="39" Pos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="113" note_type="PinballSingle" Bar="39" Pos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="114" note_type="PinballLong" Bar="39" Pos="32" EndBar="39" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="115" note_type="PinballSingle" Bar="39" Pos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="116" note_type="PinballLong" Bar="40" Pos="0" EndBar="40" EndPos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="117" note_type="PinballLong" Bar="40" Pos="0" EndBar="40" EndPos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="118" note_type="PinballSingle" Bar="41" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="119" note_type="PinballLong" Bar="41" Pos="0" EndBar="41" EndPos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="120" note_type="PinballSingle" Bar="41" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="121" note_type="PinballSingle" Bar="41" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="122" note_type="PinballLong" Bar="41" Pos="32" EndBar="41" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="123" note_type="PinballLong" Bar="42" Pos="0" EndBar="42" EndPos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="124" note_type="PinballSingle" Bar="42" Pos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="125" note_type="PinballSingle" Bar="42" Pos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="126" note_type="PinballSingle" Bar="42" Pos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="127" note_type="PinballLong" Bar="42" Pos="32" EndBar="42" EndPos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="128" note_type="PinballSlip" Bar="43" Pos="0" Son="134" EndArea="1|2" MoveTime="3" />
+      <Note ID="129" note_type="PinballSingle" Bar="43" Pos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="130" note_type="PinballLong" Bar="43" Pos="32" EndBar="43" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="131" note_type="PinballSingle" Bar="43" Pos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="132" note_type="PinballSingle" Bar="44" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="133" note_type="PinballSingle" Bar="44" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="134" note_type="PinballSlip" Bar="44" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="135" note_type="PinballSlip" Bar="51" Pos="0" Son="142" EndArea="3|4" MoveTime="3" />
+      <Note ID="136" note_type="PinballSingle" Bar="51" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="137" note_type="PinballSingle" Bar="51" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="138" note_type="PinballSingle" Bar="51" Pos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="139" note_type="PinballSingle" Bar="52" Pos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="140" note_type="PinballSingle" Bar="52" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="141" note_type="PinballSingle" Bar="52" Pos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="142" note_type="PinballSlip" Bar="52" Pos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="143" note_type="PinballLong" Bar="53" Pos="0" EndBar="53" EndPos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="144" note_type="PinballSingle" Bar="53" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="145" note_type="PinballSingle" Bar="53" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="146" note_type="PinballLong" Bar="53" Pos="32" EndBar="53" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="147" note_type="PinballSingle" Bar="53" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="148" note_type="PinballLong" Bar="54" Pos="0" EndBar="54" EndPos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="149" note_type="PinballSingle" Bar="54" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="150" note_type="PinballSingle" Bar="54" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="151" note_type="PinballLong" Bar="54" Pos="32" EndBar="54" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="152" note_type="PinballSingle" Bar="54" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="153" note_type="PinballLong" Bar="54" Pos="48" EndBar="55" EndPos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="154" note_type="PinballSlip" Bar="55" Pos="0" Son="160" EndArea="1|2" MoveTime="3" />
+      <Note ID="155" note_type="PinballSingle" Bar="55" Pos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="156" note_type="PinballSingle" Bar="55" Pos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="157" note_type="PinballSingle" Bar="55" Pos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="158" note_type="PinballSingle" Bar="55" Pos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="159" note_type="PinballLong" Bar="56" Pos="0" EndBar="56" EndPos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="160" note_type="PinballSlip" Bar="56" Pos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="161" note_type="PinballSlip" Bar="57" Pos="0" Son="169" EndArea="3|4" MoveTime="3" />
+      <Note ID="162" note_type="PinballSingle" Bar="57" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="163" note_type="PinballSingle" Bar="57" Pos="24" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="164" note_type="PinballLong" Bar="57" Pos="32" EndBar="57" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="165" note_type="PinballSlip" Bar="57" Pos="48" Son="172" EndArea="3|4" MoveTime="3" />
+      <Note ID="166" note_type="PinballSeries" Bar="58" Pos="0" Son="167" EndArea="1|2" MoveTime="3" />
+      <Note ID="167" note_type="PinballSeries" Bar="58" Pos="8" Son="168" EndArea="1|2" MoveTime="3" />
+      <Note ID="168" note_type="PinballSeries" Bar="58" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="169" note_type="PinballSlip" Bar="58" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="170" note_type="PinballLong" Bar="58" Pos="48" EndBar="59" EndPos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="171" note_type="PinballSlip" Bar="59" Pos="0" Son="179" EndArea="3|4" MoveTime="3" />
+      <Note ID="172" note_type="PinballSlip" Bar="59" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="173" note_type="PinballSingle" Bar="59" Pos="24" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="174" note_type="PinballLong" Bar="59" Pos="32" EndBar="59" EndPos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="175" note_type="PinballSlip" Bar="59" Pos="48" Son="182" EndArea="1|2" MoveTime="3" />
+      <Note ID="176" note_type="PinballSeries" Bar="60" Pos="0" Son="177" EndArea="3|4" MoveTime="3" />
+      <Note ID="177" note_type="PinballSeries" Bar="60" Pos="8" Son="178" EndArea="3|4" MoveTime="3" />
+      <Note ID="178" note_type="PinballSeries" Bar="60" Pos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="179" note_type="PinballSlip" Bar="60" Pos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="180" note_type="PinballLong" Bar="60" Pos="48" EndBar="61" EndPos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="181" note_type="PinballLong" Bar="61" Pos="0" EndBar="61" EndPos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="182" note_type="PinballSlip" Bar="61" Pos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="183" note_type="PinballSingle" Bar="61" Pos="24" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="184" note_type="PinballSingle" Bar="61" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="185" note_type="PinballSingle" Bar="61" Pos="40" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="186" note_type="PinballLong" Bar="61" Pos="48" EndBar="62" EndPos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="187" note_type="PinballSeries" Bar="62" Pos="0" Son="188" EndArea="1|2" MoveTime="3" />
+      <Note ID="188" note_type="PinballSeries" Bar="62" Pos="8" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="189" note_type="PinballSeries" Bar="62" Pos="16" Son="190" EndArea="3|4" MoveTime="3" />
+      <Note ID="190" note_type="PinballSeries" Bar="62" Pos="24" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="191" note_type="PinballSingle" Bar="62" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="192" note_type="PinballSingle" Bar="62" Pos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="193" note_type="PinballLong" Bar="62" Pos="48" EndBar="63" EndPos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="194" note_type="PinballSingle" Bar="62" Pos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="195" note_type="PinballLong" Bar="63" Pos="0" EndBar="63" EndPos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="196" note_type="PinballSingle" Bar="63" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="197" note_type="PinballSingle" Bar="63" Pos="24" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="198" note_type="PinballSingle" Bar="63" Pos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="199" note_type="PinballSingle" Bar="63" Pos="40" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="200" note_type="PinballLong" Bar="63" Pos="48" EndBar="64" EndPos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="201" note_type="PinballSeries" Bar="64" Pos="0" Son="202" EndArea="3|4" MoveTime="3" />
+      <Note ID="202" note_type="PinballSeries" Bar="64" Pos="8" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="203" note_type="PinballSeries" Bar="64" Pos="16" Son="204" EndArea="1|2" MoveTime="3" />
+      <Note ID="204" note_type="PinballSeries" Bar="64" Pos="24" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="205" note_type="PinballSingle" Bar="64" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="206" note_type="PinballSingle" Bar="64" Pos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="207" note_type="PinballLong" Bar="64" Pos="48" EndBar="65" EndPos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="208" note_type="PinballSingle" Bar="64" Pos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="209" note_type="PinballLong" Bar="65" Pos="0" EndBar="65" EndPos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="210" note_type="PinballLong" Bar="65" Pos="32" EndBar="65" EndPos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="211" note_type="PinballLong" Bar="66" Pos="0" EndBar="66" EndPos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="212" note_type="PinballLong" Bar="66" Pos="32" EndBar="66" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="213" note_type="PinballSingle" Bar="67" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="214" note_type="PinballLong" Bar="67" Pos="0" EndBar="67" EndPos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="215" note_type="PinballSingle" Bar="67" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="216" note_type="PinballSingle" Bar="67" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="217" note_type="PinballLong" Bar="67" Pos="32" EndBar="67" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="218" note_type="PinballSingle" Bar="67" Pos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="219" note_type="PinballLong" Bar="68" Pos="0" EndBar="68" EndPos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="220" note_type="PinballSingle" Bar="68" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="221" note_type="PinballSingle" Bar="69" Pos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="222" note_type="PinballLong" Bar="69" Pos="0" EndBar="69" EndPos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="223" note_type="PinballSingle" Bar="69" Pos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="224" note_type="PinballLong" Bar="69" Pos="32" EndBar="69" EndPos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="225" note_type="PinballSingle" Bar="69" Pos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="226" note_type="PinballSingle" Bar="70" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="227" note_type="PinballLong" Bar="70" Pos="0" EndBar="70" EndPos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="228" note_type="PinballSingle" Bar="70" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="229" note_type="PinballLong" Bar="70" Pos="32" EndBar="70" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="230" note_type="PinballSingle" Bar="70" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="231" note_type="PinballSlip" Bar="71" Pos="0" Son="237" EndArea="3|4" MoveTime="3" />
+      <Note ID="232" note_type="PinballSingle" Bar="71" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="233" note_type="PinballLong" Bar="71" Pos="32" EndBar="71" EndPos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="234" note_type="PinballSingle" Bar="71" Pos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="235" note_type="PinballSingle" Bar="72" Pos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="236" note_type="PinballSingle" Bar="72" Pos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="237" note_type="PinballSlip" Bar="72" Pos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="238" note_type="PinballSlip" Bar="73" Pos="0" Son="244" EndArea="3|4" MoveTime="3" />
+      <Note ID="239" note_type="PinballLong" Bar="73" Pos="16" EndBar="73" EndPos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="240" note_type="PinballSingle" Bar="73" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="241" note_type="PinballSingle" Bar="73" Pos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="242" note_type="PinballSlip" Bar="74" Pos="0" Son="249" EndArea="1|2" MoveTime="3" />
+      <Note ID="243" note_type="PinballLong" Bar="74" Pos="16" EndBar="74" EndPos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="244" note_type="PinballSlip" Bar="74" Pos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="245" note_type="PinballSingle" Bar="74" Pos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="246" note_type="PinballSingle" Bar="75" Pos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="247" note_type="PinballSingle" Bar="75" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="248" note_type="PinballSingle" Bar="75" Pos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="249" note_type="PinballSlip" Bar="75" Pos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="250" note_type="PinballSingle" Bar="75" Pos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="251" note_type="PinballSingle" Bar="76" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="252" note_type="PinballLong" Bar="76" Pos="0" EndBar="76" EndPos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="253" note_type="PinballSingle" Bar="76" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="254" note_type="PinballSingle" Bar="76" Pos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="255" note_type="PinballLong" Bar="77" Pos="0" EndBar="77" EndPos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="256" note_type="PinballSingle" Bar="77" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="257" note_type="PinballSingle" Bar="77" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="258" note_type="PinballSingle" Bar="77" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="259" note_type="PinballLong" Bar="77" Pos="32" EndBar="77" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="260" note_type="PinballLong" Bar="78" Pos="0" EndBar="78" EndPos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="261" note_type="PinballSingle" Bar="78" Pos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="262" note_type="PinballSingle" Bar="78" Pos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="263" note_type="PinballLong" Bar="78" Pos="32" EndBar="78" EndPos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="264" note_type="PinballSingle" Bar="78" Pos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="265" note_type="PinballSlip" Bar="79" Pos="0" Son="271" EndArea="1|2" MoveTime="3" />
+      <Note ID="266" note_type="PinballSingle" Bar="79" Pos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="267" note_type="PinballLong" Bar="79" Pos="32" EndBar="79" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="268" note_type="PinballSingle" Bar="79" Pos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="269" note_type="PinballSingle" Bar="80" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="270" note_type="PinballSingle" Bar="80" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="271" note_type="PinballSlip" Bar="80" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="272" note_type="PinballLong" Bar="81" Pos="0" EndBar="81" EndPos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="273" note_type="PinballSingle" Bar="81" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="274" note_type="PinballSingle" Bar="81" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="275" note_type="PinballLong" Bar="81" Pos="32" EndBar="81" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="276" note_type="PinballSingle" Bar="81" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="277" note_type="PinballSingle" Bar="82" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="278" note_type="PinballLong" Bar="82" Pos="0" EndBar="82" EndPos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="279" note_type="PinballSingle" Bar="82" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="280" note_type="PinballLong" Bar="82" Pos="32" EndBar="82" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="281" note_type="PinballSingle" Bar="82" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="282" note_type="PinballLong" Bar="82" Pos="48" EndBar="83" EndPos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="283" note_type="PinballSlip" Bar="83" Pos="0" Son="288" EndArea="1|2" MoveTime="3" />
+      <Note ID="284" note_type="PinballSingle" Bar="83" Pos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="285" note_type="PinballSingle" Bar="83" Pos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="286" note_type="PinballSingle" Bar="83" Pos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="287" note_type="PinballLong" Bar="83" Pos="48" EndBar="84" EndPos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="288" note_type="PinballSlip" Bar="84" Pos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="289" note_type="PinballLong" Bar="85" Pos="0" EndBar="86" EndPos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="290" note_type="PinballLong" Bar="86" Pos="0" EndBar="87" EndPos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="291" note_type="PinballSingle" Bar="87" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="292" note_type="PinballLong" Bar="88" Pos="0" EndBar="88" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="293" note_type="PinballSingle" Bar="89" Pos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="294" note_type="PinballSingle" Bar="89" Pos="0" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="295" note_type="PinballSingle" Bar="89" Pos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="296" note_type="PinballSingle" Bar="89" Pos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="297" note_type="PinballSingle" Bar="89" Pos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="298" note_type="PinballLong" Bar="90" Pos="0" EndBar="90" EndPos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="299" note_type="PinballLong" Bar="90" Pos="32" EndBar="90" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="300" note_type="PinballSingle" Bar="90" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="301" note_type="PinballSingle" Bar="91" Pos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="302" note_type="PinballSingle" Bar="91" Pos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="303" note_type="PinballSingle" Bar="91" Pos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="304" note_type="PinballSingle" Bar="91" Pos="48" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="305" note_type="PinballLong" Bar="92" Pos="0" EndBar="92" EndPos="32" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="306" note_type="PinballSingle" Bar="93" Pos="0" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="307" note_type="PinballSingle" Bar="93" Pos="16" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="308" note_type="PinballSingle" Bar="93" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="309" note_type="PinballSingle" Bar="93" Pos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="310" note_type="PinballLong" Bar="94" Pos="0" EndBar="94" EndPos="16" Son="" EndArea="3|4" MoveTime="3" />
+      <Note ID="311" note_type="PinballLong" Bar="94" Pos="32" EndBar="94" EndPos="48" Son="" EndArea="1|2" MoveTime="3" />
+      <Note ID="312" note_type="PinballSingle" Bar="94" Pos="32" Son="" EndArea="3|4" MoveTime="3" />
+    </Normal>
+  </NoteInfo>
+  <ActionSeq type="1">
+    <ActionList start_bar="9" dance_len="1" seq_len="4" level="2" type="" />
+    <ActionList start_bar="13" dance_len="2" seq_len="4" level="2" type="" />
+    <ActionList start_bar="17" dance_len="2" seq_len="8" level="2" type="" />
+    <ActionList start_bar="25" dance_len="2" seq_len="4" level="2" type="" />
+    <ActionList start_bar="29" dance_len="2" seq_len="4" level="2" type="" />
+    <ActionList start_bar="33" dance_len="2" seq_len="8" level="2" type="" />
+    <ActionList start_bar="41" dance_len="2" seq_len="4" level="2" type="" />
+    <ActionList start_bar="45" dance_len="4" seq_len="4" level="2" type="" />
+    <ActionList start_bar="49" dance_len="1" seq_len="4" level="2" type="" />
+    <ActionList start_bar="53" dance_len="2" seq_len="4" level="2" type="" />
+    <ActionList start_bar="57" dance_len="2" seq_len="8" level="2" type="" />
+    <ActionList start_bar="65" dance_len="2" seq_len="4" level="2" type="" />
+    <ActionList start_bar="69" dance_len="2" seq_len="8" level="2" type="" />
+    <ActionList start_bar="77" dance_len="2" seq_len="4" level="2" type="" />
+    <ActionList start_bar="81" dance_len="2" seq_len="4" level="2" type="" />
+    <ActionList start_bar="85" dance_len="2" seq_len="4" level="2" type="" />
+    <ActionList start_bar="89" dance_len="2" seq_len="4" level="2" type="" />
+    <ActionList start_bar="93" dance_len="2" seq_len="2" level="2" type="" />
+    <ActionList start_bar="95" dance_len="4" seq_len="4" level="2" type="" />
+  </ActionSeq>
+  <CameraSeq>
+    <Camera name="NL" bar="9" pos="0" end_bar="11" end_pos="0" />
+    <Camera name="SR" bar="11" pos="0" end_bar="13" end_pos="0" />
+    <Camera name="TC" bar="13" pos="0" end_bar="15" end_pos="0" />
+    <Camera name="YAOBI_UD_CENTER" bar="15" pos="0" end_bar="17" end_pos="0" />
+    <Camera name="NR" bar="17" pos="0" end_bar="19" end_pos="0" />
+    <Camera name="SL" bar="19" pos="0" end_bar="21" end_pos="0" />
+    <Camera name="BR_U" bar="21" pos="0" end_bar="23" end_pos="0" />
+    <Camera name="YAOBI_NF_06" bar="23" pos="0" end_bar="25" end_pos="0" />
+    <Camera name="SC" bar="25" pos="0" end_bar="27" end_pos="0" />
+    <Camera name="T_RL_05" bar="27" pos="0" end_bar="29" end_pos="0" />
+    <Camera name="SL" bar="29" pos="0" end_bar="31" end_pos="0" />
+    <Camera name="NR" bar="31" pos="0" end_bar="33" end_pos="0" />
+    <Camera name="TC" bar="33" pos="0" end_bar="35" end_pos="0" />
+    <Camera name="SC" bar="35" pos="0" end_bar="37" end_pos="0" />
+    <Camera name="YAOBI_NF_04" bar="37" pos="0" end_bar="41" end_pos="0" />
+    <Camera name="YAOBI_RL_08" bar="41" pos="0" end_bar="45" end_pos="0" />
+    <Camera name="NC" bar="45" pos="0" end_bar="49" end_pos="0" />
+    <Camera name="YAOBI_LR_05" bar="49" pos="0" end_bar="53" end_pos="0" />
+    <Camera name="YAOBI_NF_01" bar="53" pos="0" end_bar="57" end_pos="0" />
+    <Camera name="NR" bar="57" pos="0" end_bar="59" end_pos="0" />
+    <Camera name="TL" bar="59" pos="0" end_bar="61" end_pos="0" />
+    <Camera name="SC" bar="61" pos="0" end_bar="63" end_pos="0" />
+    <Camera name="T_LR_05" bar="63" pos="0" end_bar="65" end_pos="0" />
+    <Camera name="YAOBI_BF_02" bar="65" pos="0" end_bar="69" end_pos="0" />
+    <Camera name="YAOBI_LR_06" bar="69" pos="0" end_bar="73" end_pos="0" />
+    <Camera name="YAOBI_RL_12" bar="73" pos="0" end_bar="77" end_pos="0" />
+    <Camera name="NL" bar="77" pos="0" end_bar="79" end_pos="0" />
+    <Camera name="SR" bar="79" pos="0" end_bar="81" end_pos="0" />
+    <Camera name="YAOBI_LR_13" bar="81" pos="0" end_bar="85" end_pos="0" />
+    <Camera name="YAOBI_UD_CENTER" bar="85" pos="0" end_bar="87" end_pos="0" />
+    <Camera name="TC" bar="87" pos="0" end_bar="89" end_pos="0" />
+    <Camera name="SL" bar="89" pos="0" end_bar="91" end_pos="0" />
+    <Camera name="NR" bar="91" pos="0" end_bar="93" end_pos="0" />
+    <Camera name="YAOBI_NF_06" bar="93" pos="0" end_bar="95" end_pos="0" />
+    <Camera name="SC" bar="95" pos="0" end_bar="99" end_pos="0" />
+  </CameraSeq>
+  <DancerSort>
+    <Bar>15</Bar>
+    <Bar>17</Bar>
+    <Bar>19</Bar>
+    <Bar>21</Bar>
+    <Bar>23</Bar>
+    <Bar>25</Bar>
+    <Bar>27</Bar>
+    <Bar>29</Bar>
+    <Bar>31</Bar>
+    <Bar>33</Bar>
+    <Bar>35</Bar>
+    <Bar>37</Bar>
+    <Bar>39</Bar>
+    <Bar>41</Bar>
+    <Bar>43</Bar>
+    <Bar>51</Bar>
+    <Bar>52</Bar>
+    <Bar>53</Bar>
+    <Bar>55</Bar>
+    <Bar>57</Bar>
+    <Bar>59</Bar>
+    <Bar>61</Bar>
+    <Bar>63</Bar>
+    <Bar>65</Bar>
+    <Bar>67</Bar>
+    <Bar>69</Bar>
+    <Bar>71</Bar>
+    <Bar>73</Bar>
+    <Bar>75</Bar>
+    <Bar>77</Bar>
+    <Bar>79</Bar>
+    <Bar>81</Bar>
+    <Bar>83</Bar>
+    <Bar>85</Bar>
+    <Bar>87</Bar>
+    <Bar>89</Bar>
+    <Bar>91</Bar>
+    <Bar>93</Bar>
+  </DancerSort>
+  <StageEffectSeq>
+    <effect name="wutai_scene_global_script" bar="-1" length="-1" />
+    <effect name="wutai_scene_note_biaozhun_01" bar="9" length="36" />
+    <effect name="wutai_scene_note_biaozhun_01" bar="49" length="46" />
+    <effect name="wutai_scene_note_biaozhun_01" bar="99" length="-1" />
+  </StageEffectSeq>
+</Level>
