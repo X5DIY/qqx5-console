@@ -28,16 +28,16 @@ public class CalcuThread extends Thread {
         switch (mode) {
             case 1:
             case 2:
-                a = new XMLInfo(1);
+                a = new XMLInfo(1 ,xml.getName());
                 break;
             case 3:
-                a = new XMLInfo(2);
+                a = new XMLInfo(2 ,xml.getName());
                 break;
             case 4:
-                a = new XMLInfo(3);
+                a = new XMLInfo(3 ,xml.getName());
                 break;
             case 5:
-                a = new XMLInfo(4);
+                a = new XMLInfo(4 ,xml.getName());
                 break;
             default:
                 System.out.println("Mode in XML is not correct.");

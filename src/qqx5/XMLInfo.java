@@ -37,8 +37,9 @@ package qqx5;
 
 class XMLInfo {
 
-    XMLInfo(int mode) {
+    XMLInfo(int mode, String xmlName) {
         this.mode = mode;
+        this.xmlName = xmlName;
     }
 
     static int FireMaxNum;
@@ -62,6 +63,7 @@ class XMLInfo {
         }
     }
 
+    String xmlName;
     double bpm;// 歌曲 bpm，用于判断是否能吃到 ab 段结尾按键，功能未指定——boolean bpmOver200？
     String title;// 歌名
     String artist;// 歌手或作曲家（防止同名歌曲）

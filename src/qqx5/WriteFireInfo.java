@@ -151,19 +151,19 @@ class WriteFireInfo {
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(file1[i]));
             if (i % 3 == 0) {
-                bw.write("首字母" + div + "等级" + div
+                bw.write("首字母" + div + "等级" + div + "文件名" + div
                         + "歌名" + div + "歌手" + div + "bgm路径" + div
                         + "无技能裸分" + div + "极限技能裸分" + div
                         + "半cb" + div + "全cb" + div + "分数变化");
             } else if (i % 3 == 1) {
-                bw.write("首字母" + div + "等级" + div
+                bw.write("首字母" + div + "等级" + div + "文件名" + div
                         + "歌名" + div + "歌手" + div
                         + "类型" + div + "技能" + div
                         + "爆点" + div + "bar" + div + "box" + div
                         + "开头描述" + div + "结尾描述" + div
                         + "分数" + div + "指数");
             } else {
-                bw.write("首字母" + div + "等级" + div
+                bw.write("首字母" + div + "等级" + div + "文件名" + div
                         + "歌名" + div + "歌手" + div
                         + "类型" + div + "技能" + div
                         + "状态" + div + "先后" + div
@@ -180,7 +180,8 @@ class WriteFireInfo {
     private void firstLine2(int i) {
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(file2[i]));
-            bw.write("字母" + div + "等级" + div + "歌名" + div + "歌手" + div
+            bw.write("首字母" + div + "等级" + div + "文件名" + div
+                    + "歌名" + div + "歌手" + div
                     + "突变" + div + "技能" + div);
             if (i % 3 != 2) {
                 bw.write("类型" + div + "双排爆点" + div
@@ -270,7 +271,7 @@ class WriteFireInfo {
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(file1[i], true));
             bw.newLine();// 先换行再写内容
-            bw.write(a.firstLetter + div + a.level + div
+            bw.write(a.firstLetter + div + a.level + div+ a.xmlName + div
                     + "\"" + a.title + "\"" + div + "\"" + a.artist + "\"" + div
                     // 引号防止歌曲名中有英文逗号，从而造成其余信息位置错误
                     + a.bgmFilePath + div);
@@ -298,7 +299,7 @@ class WriteFireInfo {
 
                 bw.newLine();
 
-                bw.write(a.firstLetter + div + a.level + div
+                bw.write(a.firstLetter + div + a.level + div+ a.xmlName + div
                         + "\"" + a.title + "\"" + div + "\"" + a.artist + "\"" + div);
 
                 if (isLegend) {
@@ -354,7 +355,7 @@ class WriteFireInfo {
 
             bw.newLine();
 
-            bw.write(a.firstLetter + div + a.level + div
+            bw.write(a.firstLetter + div + a.level + div+ a.xmlName + div
                     + "\"" + a.title + "\"" + div + "\"" + a.artist + "\"" + div);
 
             if (isCommon) {
@@ -418,7 +419,7 @@ class WriteFireInfo {
             BufferedWriter bw = new BufferedWriter(new FileWriter(file2[i], true));
             bw.newLine();
 
-            bw.write(a.firstLetter + div + a.level + div
+            bw.write(a.firstLetter + div + a.level + div + a.xmlName + div
                     + "\"" + a.title + "\"" + div + "\"" + a.artist + "\"" + div);
             // 引号防止歌曲名中有英文逗号，从而造成其余信息位置错误
 

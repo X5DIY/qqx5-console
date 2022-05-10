@@ -1,6 +1,13 @@
 package qqx5;
 
-import java.io.*;
+import org.dom4j.Document;
+import org.dom4j.Element;
+import org.dom4j.io.SAXReader;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.List;
 
 import static org.menglei.GetInfo.getInfo;
 
@@ -72,39 +79,101 @@ class SetBasicInfo {
      */
     private void setIdol(XMLInfo a, boolean is4k) {
         try {
-            BufferedReader br = new BufferedReader(new FileReader(xml));
-            String s;
-            while ((s = br.readLine()) != null) {
-                if (basic(a, s)) {
-                    continue;
-                }
-                if (s.contains("note_type=\"short\"")) {// 如果是单点
-                    int target_track = idol2Int(getInfo(s, "target_track=\"", "\" note_type=\""), is4k);
-                    int boxNum = getBox(s, a, 11);
-                    a.track[target_track][boxNum] = 1;
-                    a.isLongNoteStart[target_track][boxNum] = false;
-                    a.isLongNoteEnd[target_track][boxNum] = false;
-                } else if (s.contains("note_type=\"long\"")) {// 如果是长条
-                    int target_track = idol2Int(getInfo(s, "target_track=\"", "\" note_type=\""), is4k);
-                    int boxNum = getBox(s, a, 11);
-                    int endBoxNum = getBox(s, a, 12);
-                    setCommonLong(a.track[target_track], boxNum, endBoxNum);
-                    a.isLongNoteStart[target_track][boxNum] = true;
-                    a.isLongNoteEnd[target_track][endBoxNum] = true;
-                } else if (s.contains("note_type=\"slip\"")) {// 如果是滑键
-                    int target_track = idol2Int(getInfo(s, "target_track=\"", "\" end_track=\""), is4k);
-                    int end_track = idol2Int(getInfo(s, "\" end_track=\"", "\" note_type=\""), is4k);
-                    int boxNum = getBox(s, a, 13);
-                    // 存到滑键结束位置的轨道，不与长条结尾的按键冲突
-                    a.track[end_track][boxNum] = 1;
-                    a.noteType[end_track][boxNum] = target_track * 10 + end_track;
-                    a.isLongNoteEnd[end_track][boxNum] = false;
-                    a.isLongNoteStart[end_track][boxNum] = false;
+            Document document = new SAXReader().read(xml);
+            Element Level = document.getRootElement();
+
+            Element MusicInfo = Level.element("MusicInfo");
+            a.title = MusicInfo.elementText("Title");
+            a.artist = MusicInfo.elementText("Artist");
+            // bgm 路径，官谱将包含序号，方便后续找谱面文件
+            // 自制谱面的这部分并不一定全为数字，所以不能转 int
+            a.bgmFilePath = MusicInfo.elementText("FilePath").replace("audio/bgm/", "");
+
+            List<Element> SectionSeq = Level.element("SectionSeq").elements();
+            for (int i = 0; i < SectionSeq.size(); i++) {
+                switch (i) {
+                    case 2 -> {
+                        // 歌曲 a 段开始 bar，默认 b 段开始也是这里
+                        a.note1Bar = Integer.parseInt(SectionSeq.get(i).attributeValue("startbar"));
+                        this.note1Box = a.getNote1Box();
+                        a.note2Bar = a.note1Bar;
+                        this.note2Box = a.getNote2Box();
+                    }
+                    case 3 -> {
+                        // 中场 st 开始 bar，默认结尾 st 开始也是这里
+                        a.st1Bar = Integer.parseInt(SectionSeq.get(i).attributeValue("startbar"));
+                        this.st1Box = a.getSt1Box();
+                        a.st2Bar = a.st1Bar;
+                        this.st2Box = a.getSt2Box();
+                        newAllArray(a);
+                    }
+                    case 4 -> {
+                        // 歌曲 b 段开始 bar
+                        a.note2Bar = Integer.parseInt(SectionSeq.get(i).attributeValue("startbar"));
+                        this.note2Box = a.getNote2Box();
+                    }
+                    case 5 -> {
+                        // 结尾 st 开始 bar
+                        a.st2Bar = Integer.parseInt(SectionSeq.get(i).attributeValue("startbar"));
+                        this.st2Box = a.getSt2Box();
+                        newAllArray(a);
+                    }
                 }
             }
-            br.close();
+
+            List<Element> NoteInfo = Level.element("NoteInfo").element("Normal").elements();
+            for (int i = 0; i < NoteInfo.size(); i++) {
+                Element note = NoteInfo.get(i);
+                if (note.getName().equals("Note")) {
+                    processIdolNote(a, note, is4k);
+                } else {
+                    List<Element> notes = note.elements();
+                    for (int j = 0; j < notes.size(); j++) {
+                        Element note0 = notes.get(j);
+                        processIdolNote(a, note0, is4k);
+                    }
+                }
+            }
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    private void processIdolNote(XMLInfo a, Element e, boolean is4k) throws SetInfoException {
+        switch (e.attributeValue("note_type")) {
+            case "short" -> {
+                int target_track = idol2Int(e.attributeValue("target_track"), is4k);
+                int bar = Integer.parseInt(e.attributeValue("Bar"));
+                int box = Integer.parseInt(e.attributeValue("Pos")) / 2;
+                int boxNum = (bar - a.note1Bar) * a.boxPerBar + box + 4;
+                a.track[target_track][boxNum] = 1;
+                a.isLongNoteStart[target_track][boxNum] = false;
+                a.isLongNoteEnd[target_track][boxNum] = false;
+            }
+            case "long" -> {
+                int target_track = idol2Int(e.attributeValue("target_track"), is4k);
+                int bar = Integer.parseInt(e.attributeValue("Bar"));
+                int box = Integer.parseInt(e.attributeValue("Pos")) / 2;
+                int boxNum = (bar - a.note1Bar) * a.boxPerBar + box + 4;
+                int endBar = Integer.parseInt(e.attributeValue("EndBar"));
+                int endBox = Integer.parseInt(e.attributeValue("EndPos")) / 2;
+                int endBoxNum = (endBar - a.note1Bar) * a.boxPerBar + endBox + 4;
+                setCommonLong(a.track[target_track], boxNum, endBoxNum);
+                a.isLongNoteStart[target_track][boxNum] = true;
+                a.isLongNoteEnd[target_track][endBoxNum] = true;
+            }
+            case "slip" -> {
+                int target_track = idol2Int(e.attributeValue("target_track"), is4k);
+                int end_track = idol2Int(e.attributeValue("end_track"), is4k);
+                int bar = Integer.parseInt(e.attributeValue("Bar"));
+                int box = Integer.parseInt(e.attributeValue("Pos")) / 2;
+                int boxNum = (bar - a.note1Bar) * a.boxPerBar + box + 4;
+                // 存到滑键结束位置的轨道，不与长条结尾的按键冲突
+                a.track[end_track][boxNum] = 1;
+                a.noteType[end_track][boxNum] = target_track * 10 + end_track;
+                a.isLongNoteEnd[end_track][boxNum] = false;
+                a.isLongNoteStart[end_track][boxNum] = false;
+            }
         }
     }
 
@@ -210,11 +279,11 @@ class SetBasicInfo {
                             setBubbleSingle(a, boxNum, x, y);
                             break;
                         case 1:
-                            y = Integer.parseInt(getInfo(s, "\" y=\"", "\" />"));
+                            y = Integer.parseInt(getInfo(s, "\" y=\"", "\"/>"));
                             setBubbleLong(a, boxNum, endBoxNum, x, y, false);
                             break;
                         case 2:
-                            y = Integer.parseInt(getInfo(s, "\" y=\"", "\" />"));
+                            y = Integer.parseInt(getInfo(s, "\" y=\"", "\"/>"));
                             setBubbleLong(a, boxNum, endBoxNum, x, y, true);
                             break;
                     }
@@ -253,7 +322,7 @@ class SetBasicInfo {
                 } else if (s.contains("note_type=\"long\"")) {// 如果是长条
                     int boxNum = getBox(s, a, 41);
                     int angle = Integer.parseInt(getInfo(s, "track=\"", "\" note_type=\""));
-                    int length = Integer.parseInt(getInfo(s, "\" length=\"", "\" />")) / 2;
+                    int length = Integer.parseInt(getInfo(s, "\" length=\"", "\"/>")) / 2;
                     // length 以 pos 为单位，所以要除以2，转为以 box 为单位
                     setCrescentLong(a, boxNum, boxNum + length, angle);
                 } else if (s.contains("note_type=\"slip\"")) {// 如果是滑条
@@ -261,7 +330,7 @@ class SetBasicInfo {
                     int angle1 = Integer.parseInt(getInfo(s, "track=\"", "\" target_track=\""));
                     String Angle2 = getInfo(s, "\" target_track=\"", "\" note_type=\"");
                     // Angle2 可能包含"," 需要拆分成多个
-                    String Length = getInfo(s, "\" length=\"", "\" />");
+                    String Length = getInfo(s, "\" length=\"", "\"/>");
                     // Length 同样需要拆分
                     setCrescentSlip(a, boxNum, angle1, Angle2, Length, 0);
                 }
@@ -362,7 +431,7 @@ class SetBasicInfo {
                 break;
             case 12:// 星动长条结尾
                 bar = Integer.parseInt(getInfo(s, "EndBar=\"", "\" EndPos=\""));
-                box = Integer.parseInt(getInfo(s, "\" EndPos=\"", "\" />")) / 2;
+                box = Integer.parseInt(getInfo(s, "\" EndPos=\"", "\"/>")) / 2;
                 break;
             case 13:// 星动滑键
                 bar = Integer.parseInt(getInfo(s, "<Note Bar=\"", "\" Pos=\""));
@@ -382,7 +451,7 @@ class SetBasicInfo {
                 break;
             case 31:// 泡泡数字重置
                 bar = Integer.parseInt(getInfo(s, "<Pos Bar=\"", "\" BeatPos=\""));
-                box = Integer.parseInt(getInfo(s, "\" BeatPos=\"", "\" />")) / 2;
+                box = Integer.parseInt(getInfo(s, "\" BeatPos=\"", "\"/>")) / 2;
                 break;
             case 32:// 泡泡单点/绿条开始/蓝条开始
                 bar = Integer.parseInt(getInfo(s, "<Note Bar=\"", "\" BeatPos=\""));
@@ -626,10 +695,10 @@ class SetBasicInfo {
         boolean isEnd = false;// isEnd 等价于 Angle2.contains(",") 或 Length.contains(",")
         if (Angle2.contains(",")) {
             angle2 = Integer.parseInt(Angle2.substring(0, Angle2.indexOf(",")));
-            length = Integer.parseInt(Length.substring(0, Length.indexOf(",")))/2;
+            length = Integer.parseInt(Length.substring(0, Length.indexOf(","))) / 2;
         } else {
             angle2 = Integer.parseInt(Angle2);
-            length = Integer.parseInt(Length)/2;
+            length = Integer.parseInt(Length) / 2;
             isEnd = true;
         }
         // 处理非整个滑条结尾的部分
@@ -1130,7 +1199,7 @@ class SetBasicInfo {
                             int type = a.noteType[track][box];
                             if (type < 0) {
                                 s.append("左滑条");
-                            }else {
+                            } else {
                                 s.append("右滑条");
                             }
                             if (type == -3) {
@@ -1146,7 +1215,7 @@ class SetBasicInfo {
                                     s.append("开始、");
                                 } else if (a.isLongNoteEnd[track][box]) {
                                     s.append("结尾、");
-                                }else {
+                                } else {
                                     s.append("中间、");
                                 }
                             }

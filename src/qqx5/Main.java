@@ -20,7 +20,7 @@ class Main {
             System.out.println("2.文件提取与转换");// 提取安装包的bytes及bgm文件，bytes转xml
             System.out.println("3.解压安装包内所有文件");// 提取安装包的bytes及bgm文件，bytes转xml
             System.out.println("0.退出程序");
-            Scanner scanner = new Scanner(System.in);
+            Scanner scanner = new Scanner(System.in).useDelimiter("\n");
             switch (scanner.next()) {
                 case "1":
                     System.out.println("输入谱面文件路径或其所在文件夹，连接符用 \"/\"");
