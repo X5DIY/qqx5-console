@@ -1,48 +1,39 @@
 package qqx5;
 
 import java.io.File;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-import static qqx5.CalculateFunction.*;
+import static qqx5.CalculateFunction.linkedHashMap;
+import static qqx5.CalculateFunction.threadNum;
 
 public class CalcuThread extends Thread {
 
-    private int threadNo;
-    private static ReadWriteLock lock = new ReentrantReadWriteLock();
+    private final int threadNo;
+    private static final ReadWriteLock lock = new ReentrantReadWriteLock();
 
     CalcuThread(int threadNo) {
         this.threadNo = threadNo;
     }
 
     public void run() {
-        for (int i = 0; i < fileNum; i++) {
-            if (i % threadNum == threadNo) {
-                process(files[i], fileMode[i]);
-            }
+        int i = 0;
+        for (Map.Entry<File, Integer> entry : linkedHashMap.entrySet()) {
+            process(entry.getKey() , entry.getValue());
+            i++;
         }
     }
 
     private void process(File xml, int mode) {
-        XMLInfo a;
-        switch (mode) {
-            case 1:
-            case 2:
-                a = new XMLInfo(1 ,xml.getName());
-                break;
-            case 3:
-                a = new XMLInfo(2 ,xml.getName());
-                break;
-            case 4:
-                a = new XMLInfo(3 ,xml.getName());
-                break;
-            case 5:
-                a = new XMLInfo(4 ,xml.getName());
-                break;
-            default:
-                System.out.println("Mode in XML is not correct.");
-                return;
-        }
+        XMLInfo a = switch (mode) {
+            case 1, 2 -> a = new XMLInfo(1, xml.getName());
+            case 3 -> a = new XMLInfo(2, xml.getName());
+            case 4 -> a = new XMLInfo(3, xml.getName());
+            case 5 -> a = new XMLInfo(4, xml.getName());
+            default -> throw new IllegalStateException("Unexpected value: " + mode);
+        };
 
         try {
             new SetBasicInfo(xml, mode).set(a);// 读取 xml 并录入有用的信息

@@ -3,23 +3,20 @@ package qqx5;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.util.LinkedHashMap;
 import java.util.Scanner;
 
-import static qqx5.Main.time;
 import static org.menglei.GetInfo.getInfo;
+import static qqx5.Main.time;
 
 class CalculateFunction {
 
-    static File[] files;// 所有要处理的文件
-    static int fileNum;
-    static int[] fileMode;
-    static int threadNum = 24;// 线程数目
+    static LinkedHashMap<File, Integer> linkedHashMap;// 所有要处理的文件
+    static int threadNum = Runtime.getRuntime().availableProcessors();// 线程数目
 
     CalculateFunction(String rootFilePath) {
         this.rootFilePath = rootFilePath;
-        files = new File[5000];// 所有要处理的文件，5000 是谱面文件最大数量
-        fileNum = 0;
-        fileMode = new int[5000];
+        linkedHashMap = new LinkedHashMap<>();
     }
 
     private String rootFilePath;
@@ -59,7 +56,7 @@ class CalculateFunction {
         new WriteFireInfo(maxDiff, outMode).writeFirst();// 写入所有文件第一行
         System.out.println("正在查找谱面文件ing");
         traversalFile(new File(rootFilePath));// 记录所有符合的xml文件
-        System.out.println("查找完毕，共找到 " + fileNum + " 个谱面文件，开始处理！");
+        System.out.println("查找完毕，共找到 " + linkedHashMap.size() + " 个谱面文件，开始处理！");
 
         CalcuThread[] calcuThreads = new CalcuThread[threadNum];
         for (int i = 0; i < threadNum; i++) {
@@ -94,9 +91,7 @@ class CalculateFunction {
                 if (file.getName().endsWith(".xml")) {// 如果后缀是xml
                     int mode = getMode(file);
                     if (mode != 0) {
-                        files[fileNum] = file;
-                        fileMode[fileNum] = mode;
-                        fileNum++;
+                        linkedHashMap.put(file, mode);
                     }
                 }
             } else {// 如果是文件夹

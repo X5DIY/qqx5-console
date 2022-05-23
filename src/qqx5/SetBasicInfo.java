@@ -41,6 +41,7 @@ class SetBasicInfo {
     private int[][] X;// 泡泡按键 x 坐标
     private int[][] Y;
     private int[][] angle;// 弦月按键角度
+    private int[][] lightIndex;//弦月滑点是第几个
 
     void set(XMLInfo a) throws SetInfoException {
         setNote(a);
@@ -401,6 +402,7 @@ class SetBasicInfo {
         }
         if (mode == 5) {
             this.angle = new int[5][st2Box + 5];
+            this.lightIndex = new int[5][st2Box + 5];
         }
         a.combo = new int[st2Box + 5];
         a.track = new int[5][st2Box + 5];
@@ -628,6 +630,48 @@ class SetBasicInfo {
             if (a.track[track][boxNum] == 0) {
                 if (isLight) {
                     a.track[track][boxNum] = 4;
+                    //查找两格内所有范围在±10以内的滑点
+                    boolean find = false;
+                    int lastAngle = 0;
+                    int trackP = 0;
+                    int boxP = 0;
+                    for (int changeBox = -1; changeBox >= -2; changeBox--) {
+                        if (find) {
+                            //如果在一格前就已经找到滑点，两格前就没必要看了
+                            break;
+                        }
+                        for (int track0 = 0; track0 < 5; track0++) {
+                            //如果是滑点
+                            if (a.track[track0][boxNum + changeBox] == 4) {
+                                int angle0 = this.angle[track0][boxNum + changeBox];
+                                if (Math.abs(angle0 - angle) <= 10) {
+                                    // 找到了在范围内的滑点
+                                    if (find) {
+                                        //已经有邻近的滑点，需要比较两个滑点的angel差值，看哪个更近
+                                        //相同差值还是用旧的，不改，只有小了才换
+                                        if (Math.abs(angle0 - angle) < Math.abs(lastAngle - angle)) {
+                                            lastAngle = angle0;
+                                            trackP = track0;
+                                            boxP = boxNum + changeBox;
+                                        }
+                                    } else {
+                                        //第一个相邻的滑点，直接赋值
+                                        lastAngle = angle0;
+                                        trackP = track0;
+                                        boxP = boxNum + changeBox;
+                                        find = true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    if (find) {
+                        //找到了前置滑点，该滑点序号=前置+1
+                        lightIndex[track][boxNum] = lightIndex[trackP][boxP] + 1;
+                    } else {
+                        //未找到前置滑点，该滑点序号=1
+                        lightIndex[track][boxNum] = 1;
+                    }
                 } else {
                     a.track[track][boxNum] = 1;
                 }
@@ -1184,7 +1228,7 @@ class SetBasicInfo {
                     if (a.track[track][box] == 1) {// 如果为单点
                         s.append(crescent2Str(track, box)).append("单点、");
                     } else if (a.track[track][box] == 4) {// 如果为滑点
-                        s.append(crescent2Str(track, box)).append("滑点、");
+                        s.append(crescent2Str(track, box)).append("起手第").append(lightIndex[track][box]).append("个滑点、");
                     } else if (a.track[track][box] == 3) {// 如果为长条或滑条
                         if (a.noteType[track][box] == 0) {// 长条三种
                             if (a.isLongNoteStart[track][box]) {
@@ -1242,16 +1286,19 @@ class SetBasicInfo {
 
     private String crescent2Str(int track, int box) {
         int angle = this.angle[track][box];
-        if (angle < -25) {
-            return "左边";
-        } else if (angle < 0) {
+        if (angle < -30) {
+            //-50，-45，-40，-35
+            return "左侧";
+        } else if (angle < -10) {
+            //-30，-25，-20，-15
             return "左下";
-        } else if (angle == 0) {
-            return "中间";
-        } else if (angle <= 25) {
+        } else if (angle <= 10) {
+            //-10，-5，0，5，10
+            return "下方";
+        } else if (angle <= 30) {
             return "右下";
         } else {
-            return "右边";
+            return "右侧";
         }
     }
 
@@ -1298,7 +1345,7 @@ class SetBasicInfo {
     private void setFirstLetterAndLevel(XMLInfo a) {
         try {
             BufferedReader br = new BufferedReader(new FileReader
-                    (new File("firstLetter_level/" + a.getStrMode() + ".txt")));
+                    ("firstLetter_level/" + a.getStrMode() + ".txt"));
             String s;
             while ((s = br.readLine()) != null) {
                 if (getInfo(s, "\t", 2, "\t", 3, false, false).equals(a.title)
