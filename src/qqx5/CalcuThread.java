@@ -8,8 +8,8 @@ import static qqx5.CalculateFunction.*;
 
 public class CalcuThread extends Thread {
 
-    private int threadNo;
-    private static ReadWriteLock lock = new ReentrantReadWriteLock();
+    private final int threadNo;
+    private static final ReadWriteLock lock = new ReentrantReadWriteLock();
 
     CalcuThread(int threadNo) {
         this.threadNo = threadNo;
