@@ -7,7 +7,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import static qqx5.Calculate.*;
+import static qqx5.Calculate.CommonFireLength;
+import static qqx5.Calculate.ExtremeFireLength;
+import static qqx5.Calculate.LegendFireLength;
 
 class WriteFireInfo {
 
@@ -184,12 +186,10 @@ class WriteFireInfo {
                     + "歌名" + div + "歌手" + div
                     + "突变" + div + "技能" + div);
             if (i % 3 != 2) {
-                bw.write("类型" + div + "双排爆点" + div
-                        + "开头描述" + div + "结尾描述" + div
+                bw.write("类型" + div + "双排爆点" + div + "开头描述" + div + "结束爆点" + div + "结尾描述" + div
                         + "半cb" + div + "全cb" + div + "双指数" + div);
             }
-            bw.write("单排爆点" + div
-                    + "开头描述" + div + "结尾描述" + div
+            bw.write("单排爆点" + div + "开头描述" + div + "结束爆点" + div + "结尾描述" + div
                     + "半cb" + div + "全cb" + div + "分数" + div + "单指数");
             bw.close();
         } catch (Exception e) {
@@ -271,7 +271,7 @@ class WriteFireInfo {
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(file1[i], true));
             bw.newLine();// 先换行再写内容
-            bw.write(a.firstLetter + div + a.level + div+ a.xmlName + div
+            bw.write(a.firstLetter + div + a.level + div + a.xmlName + div
                     + "\"" + a.title + "\"" + div + "\"" + a.artist + "\"" + div
                     // 引号防止歌曲名中有英文逗号，从而造成其余信息位置错误
                     + a.bgmFilePath + div);
@@ -299,7 +299,7 @@ class WriteFireInfo {
 
                 bw.newLine();
 
-                bw.write(a.firstLetter + div + a.level + div+ a.xmlName + div
+                bw.write(a.firstLetter + div + a.level + div + a.xmlName + div
                         + "\"" + a.title + "\"" + div + "\"" + a.artist + "\"" + div);
 
                 if (isLegend) {
@@ -355,7 +355,7 @@ class WriteFireInfo {
 
             bw.newLine();
 
-            bw.write(a.firstLetter + div + a.level + div+ a.xmlName + div
+            bw.write(a.firstLetter + div + a.level + div + a.xmlName + div
                     + "\"" + a.title + "\"" + div + "\"" + a.artist + "\"" + div);
 
             if (isCommon) {
@@ -445,20 +445,21 @@ class WriteFireInfo {
             if (!isLegend) {
                 bw.write(a.getStrType(isCommon, 0) + div);
 
-                StringBuilder doubleCombo = new StringBuilder();
+                StringBuilder doubleCombo1 = new StringBuilder();
                 for (int num = 0; num < XMLInfo.FireMaxNum; num++) {
                     if (a.getDoubleScore(isCommon, num) < a.getDoubleScore(isCommon, 0)) {
+                        //除去所有低于最高分的
                         break;
                     }
                     if (a.getStrMode().equals("泡泡")) {
-                        doubleCombo.append(a.combo[a.getDoubleFireBox(isCommon, true, num)] + 1).append(" + ")
+                        doubleCombo1.append(a.combo[a.getDoubleFireBox(isCommon, true, num)] + 1).append(" + ")
                                 .append(a.combo[a.getDoubleFireBox(isCommon, false, num)] + 1).append("、");
                     } else {
-                        doubleCombo.append(a.combo[a.getDoubleFireBox(isCommon, true, num)]).append(" + ")
+                        doubleCombo1.append(a.combo[a.getDoubleFireBox(isCommon, true, num)]).append(" + ")
                                 .append(a.combo[a.getDoubleFireBox(isCommon, false, num)]).append("、");
                     }
                 }
-                bw.write(doubleCombo.toString().substring(0, doubleCombo.toString().length() - 1) + div);
+                bw.write(doubleCombo1.substring(0, doubleCombo1.toString().length() - 1) + div);
 
                 int fireBox1 = a.getDoubleFireBox(isCommon, true, 0);
                 int fireBox2 = a.getDoubleFireBox(isCommon, false, 0);
@@ -467,10 +468,42 @@ class WriteFireInfo {
                 // WPS 中利用替换功能，可将 ^^^ 替换为换行符，从而达到分割目的
 
                 if (a.isSeparate(isCommon, 0)) {// 分开
+                    StringBuilder doubleCombo2 = new StringBuilder();
+                    for (int num = 0; num < XMLInfo.FireMaxNum; num++) {
+                        if (a.getDoubleScore(isCommon, num) < a.getDoubleScore(isCommon, 0)) {
+                            //除去所有低于最高分的
+                            break;
+                        }
+                        if (a.getStrMode().equals("泡泡")) {
+                            doubleCombo2.append(a.combo[a.getDoubleFireBox(isCommon, true, num) + fireLength] + 1).append(" + ")
+                                    .append(a.combo[a.getDoubleFireBox(isCommon, false, num) + fireLength] + 1).append("、");
+                        } else {
+                            doubleCombo2.append(a.combo[a.getDoubleFireBox(isCommon, true, num) + fireLength]).append(" + ")
+                                    .append(a.combo[a.getDoubleFireBox(isCommon, false, num) + fireLength]).append("、");
+                        }
+                    }
+                    bw.write(doubleCombo2.substring(0, doubleCombo2.toString().length() - 1) + div);
+
                     bw.write(a.getBoxDescribe(false, false, fireBox1 + fireLength) + "^^^"
                             + a.getBoxDescribe(false, false, fireBox2 + fireLength) + div);
                 } else {// 存气
                     int fireLength2 = 2 * fireLength - (a.getSt1Box() - fireBox1) - 4;
+
+                    StringBuilder doubleCombo2 = new StringBuilder();
+                    for (int num = 0; num < XMLInfo.FireMaxNum; num++) {
+                        if (a.getDoubleScore(isCommon, num) < a.getDoubleScore(isCommon, 0)) {
+                            break;
+                        }
+                        if (a.getStrMode().equals("泡泡")) {
+                            doubleCombo2.append(a.combo[a.getSt1Box()] + 1).append(" + ")
+                                    .append(a.combo[a.getDoubleFireBox(isCommon, false, num) + fireLength2] + 1).append("、");
+                        } else {
+                            doubleCombo2.append(a.combo[a.getSt1Box()]).append(" + ")
+                                    .append(a.combo[a.getDoubleFireBox(isCommon, false, num) + fireLength2]).append("、");
+                        }
+                    }
+                    bw.write(doubleCombo2.substring(0, doubleCombo2.toString().length() - 1) + div);
+
                     bw.write(a.getBoxDescribe(false, false, a.getSt1Box()) + "^^^"
                             + a.getBoxDescribe(false, false, fireBox2 + fireLength2) + div);
                 }
