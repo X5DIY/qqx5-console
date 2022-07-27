@@ -169,7 +169,7 @@ class SetBasicInfo {
                 int bar = Integer.parseInt(e.attributeValue("Bar"));
                 int box = Integer.parseInt(e.attributeValue("Pos")) / 2;
                 int boxNum = (bar - a.note1Bar) * a.boxPerBar + box + 4;
-                // 存到滑键结束位置的轨道，不与长条结尾的按键冲突
+                // 存到滑键结束位置的轨道，不与条尾的按键冲突
                 a.track[end_track][boxNum] = 1;
                 a.noteType[end_track][boxNum] = target_track * 10 + end_track;
                 a.isLongNoteEnd[end_track][boxNum] = false;
@@ -280,11 +280,11 @@ class SetBasicInfo {
                             setBubbleSingle(a, boxNum, x, y);
                             break;
                         case 1:
-                            y = Integer.parseInt(getInfo(s, "\" y=\"", "\"/>"));
+                            y = Integer.parseInt(getInfo(s, "\" y=\"", "\" />"));
                             setBubbleLong(a, boxNum, endBoxNum, x, y, false);
                             break;
                         case 2:
-                            y = Integer.parseInt(getInfo(s, "\" y=\"", "\"/>"));
+                            y = Integer.parseInt(getInfo(s, "\" y=\"", "\" />"));
                             setBubbleLong(a, boxNum, endBoxNum, x, y, true);
                             break;
                     }
@@ -323,7 +323,7 @@ class SetBasicInfo {
                 } else if (s.contains("note_type=\"long\"")) {// 如果是长条
                     int boxNum = getBox(s, a, 41);
                     int angle = Integer.parseInt(getInfo(s, "track=\"", "\" note_type=\""));
-                    int length = Integer.parseInt(getInfo(s, "\" length=\"", "\"/>")) / 2;
+                    int length = Integer.parseInt(getInfo(s, "\" length=\"", "\" />")) / 2;
                     // length 以 pos 为单位，所以要除以2，转为以 box 为单位
                     setCrescentLong(a, boxNum, boxNum + length, angle);
                 } else if (s.contains("note_type=\"slip\"")) {// 如果是滑条
@@ -331,7 +331,7 @@ class SetBasicInfo {
                     int angle1 = Integer.parseInt(getInfo(s, "track=\"", "\" target_track=\""));
                     String Angle2 = getInfo(s, "\" target_track=\"", "\" note_type=\"");
                     // Angle2 可能包含"," 需要拆分成多个
-                    String Length = getInfo(s, "\" length=\"", "\"/>");
+                    String Length = getInfo(s, "\" length=\"", "\" />");
                     // Length 同样需要拆分
                     setCrescentSlip(a, boxNum, angle1, Angle2, Length, 0);
                 }
@@ -427,13 +427,13 @@ class SetBasicInfo {
         int bar;
         int box;
         switch (state) {
-            case 11:// 星动单点/长条开始
+            case 11:// 星动单点/条头
                 bar = Integer.parseInt(getInfo(s, "<Note Bar=\"", "\" Pos=\""));
                 box = Integer.parseInt(getInfo(s, "\" Pos=\"", "\" from_track=\"")) / 2;
                 break;
-            case 12:// 星动长条结尾
+            case 12:// 星动条尾
                 bar = Integer.parseInt(getInfo(s, "EndBar=\"", "\" EndPos=\""));
-                box = Integer.parseInt(getInfo(s, "\" EndPos=\"", "\"/>")) / 2;
+                box = Integer.parseInt(getInfo(s, "\" EndPos=\"", "\" />")) / 2;
                 break;
             case 13:// 星动滑键
                 bar = Integer.parseInt(getInfo(s, "<Note Bar=\"", "\" Pos=\""));
@@ -443,17 +443,17 @@ class SetBasicInfo {
                 bar = Integer.parseInt(getInfo(s, "Bar=\"", "\" Pos=\""));
                 box = Integer.parseInt(getInfo(s, "\" Pos=\"", "\" Son=\"")) / 2;
                 break;
-            case 22:// 弹珠长条开始
+            case 22:// 弹珠条头
                 bar = Integer.parseInt(getInfo(s, "Bar=\"", "\" Pos=\""));
                 box = Integer.parseInt(getInfo(s, "\" Pos=\"", "\" EndBar=\"")) / 2;
                 break;
-            case 23:// 弹珠长条结尾
+            case 23:// 弹珠条尾
                 bar = Integer.parseInt(getInfo(s, "\" EndBar=\"", "\" EndPos=\""));
                 box = Integer.parseInt(getInfo(s, "\" EndPos=\"", "\" Son=\"")) / 2;
                 break;
             case 31:// 泡泡数字重置
                 bar = Integer.parseInt(getInfo(s, "<Pos Bar=\"", "\" BeatPos=\""));
-                box = Integer.parseInt(getInfo(s, "\" BeatPos=\"", "\"/>")) / 2;
+                box = Integer.parseInt(getInfo(s, "\" BeatPos=\"", "\" />")) / 2;
                 break;
             case 32:// 泡泡单点/绿条开始/蓝条开始
                 bar = Integer.parseInt(getInfo(s, "<Note Bar=\"", "\" BeatPos=\""));
@@ -536,11 +536,11 @@ class SetBasicInfo {
     /**
      * 检查长条起始是否为滑键结尾
      * 为0 说明非滑键结尾，该格子有长条分数；反之无长条分数
-     * 长条结尾必然有一个长条键
+     * 条尾必然有一个长条键
      *
      * @param track     长条所在的轨道
-     * @param boxNum    长条开始 box
-     * @param endBoxNum 长条结尾 box
+     * @param boxNum    条头 box
+     * @param endBoxNum 条尾 box
      */
     private static void setCommonLong(int[] track, int boxNum, int endBoxNum) {
         for (int box = boxNum; box < endBoxNum; box += 2) {
@@ -912,7 +912,7 @@ class SetBasicInfo {
                         if (a.isLongNoteStart[track][box]) {
                             // 因为前提是该位置为长条键，所以如果有滑键的话，这个位置必然不为3
                             // 所以这样的情况必然是单长条起始，而非滑键长条起始
-                            s.append(idol2Str(track)).append("轨长条开始、");
+                            s.append(idol2Str(track)).append("轨条头、");
                         } else if (a.isLongNoteEnd[track][box]) {
                             boolean isSingleLong = true;
                             for (int i = 0; i < 5; i++) {
@@ -922,10 +922,10 @@ class SetBasicInfo {
                                 }
                             }
                             if (isSingleLong) {
-                                s.append(idol2Str(track)).append("轨长条结尾、");
+                                s.append(idol2Str(track)).append("轨条尾、");
                             }
                         } else {
-                            s.append(idol2Str(track)).append("轨长条中间、");
+                            s.append(idol2Str(track)).append("轨条中、");
                         }
                     }
                 }
@@ -1015,11 +1015,11 @@ class SetBasicInfo {
                         s.append(pinball2Str(track)).append("白球、");
                     } else if (a.track[track][box] == 3) {
                         if (a.isLongNoteStart[track][box]) {
-                            s.append(pinball2Str(track)).append("长条开始、");
+                            s.append(pinball2Str(track)).append("条头、");
                         } else if (a.isLongNoteEnd[track][box]) {
-                            s.append(pinball2Str(track)).append("长条结尾、");
+                            s.append(pinball2Str(track)).append("条尾、");
                         } else {
-                            s.append(pinball2Str(track)).append("长条中间、");
+                            s.append(pinball2Str(track)).append("条中、");
                         }
                     }
                 }
@@ -1120,21 +1120,21 @@ class SetBasicInfo {
                         } else {
                             s.append(bubbleDirection(track, box)).append("数字 ").append(this.noteNum2[track][box]);
                             if (a.isLongNoteStart[track][box]) {
-                                s.append(" 蓝条开始、");
+                                s.append(" 蓝条头、");
                             } else if (a.isLongNoteEnd[track][box]) {
-                                s.append(" 蓝条结尾、");
+                                s.append(" 蓝条尾、");
                             } else {
-                                s.append(" 蓝条中间、");
+                                s.append(" 蓝条中、");
                             }
                         }
                     } else if (a.track[track][box] == 3) {
                         s.append(bubbleDirection(track, box)).append("数字 ").append(this.noteNum2[track][box]);
                         if (a.isLongNoteStart[track][box]) {
-                            s.append(" 绿条开始、");
+                            s.append(" 绿条头、");
                         } else if (a.isLongNoteEnd[track][box]) {
-                            s.append(" 绿条结尾、");
+                            s.append(" 绿条尾、");
                         } else {
-                            s.append(" 绿条中间、");
+                            s.append(" 绿条中、");
                         }
                     }
                 }
@@ -1232,11 +1232,11 @@ class SetBasicInfo {
                     } else if (a.track[track][box] == 3) {// 如果为长条或滑条
                         if (a.noteType[track][box] == 0) {// 长条三种
                             if (a.isLongNoteStart[track][box]) {
-                                s.append(crescent2Str(track, box)).append("长条开始、");
+                                s.append(crescent2Str(track, box)).append("条头、");
                             } else if (a.isLongNoteEnd[track][box]) {
-                                s.append(crescent2Str(track, box)).append("长条结尾、");
+                                s.append(crescent2Str(track, box)).append("条尾、");
                             } else {
-                                s.append(crescent2Str(track, box)).append("长条中间、");
+                                s.append(crescent2Str(track, box)).append("条中、");
                             }
                         } else {// 滑条四种，开头中间结尾拐
                             s.append(crescent2Str(track, box));
