@@ -1286,19 +1286,27 @@ class SetBasicInfo {
 
     private String crescent2Str(int track, int box) {
         int angle = this.angle[track][box];
-        if (angle < -30) {
-            //-50，-45，-40，-35
-            return "左侧";
-        } else if (angle < -10) {
-            //-30，-25，-20，-15
+        if (angle <= -40) {
+            //-50，-45，-40
+            return "左上";
+        } else if (angle <= -25) {
+            //-35，-30，-25
+            return "左中";
+        } else if (angle <= -10) {
+            //-20，-15，-10
             return "左下";
-        } else if (angle <= 10) {
-            //-10，-5，0，5，10
+        } else if (angle <= 5) {
+            //-5，0，5
             return "下方";
-        } else if (angle <= 30) {
+        } else if (angle <= 20) {
+            //10，15，20
             return "右下";
+        } else if (angle <= 35) {
+            //25，30，35
+            return "右中";
         } else {
-            return "右侧";
+            //40，45，50
+            return "右上";
         }
     }
 
