@@ -121,7 +121,7 @@ class CalculateFunction {
             String s;
             int track = 0;
             while ((s = br.readLine()) != null) {
-                if (s.contains("<Type>")) {
+                if (s.contains("<Type>Crescent")) {
                     br.close();
                     return 5;
                 }

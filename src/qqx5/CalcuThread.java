@@ -2,7 +2,6 @@ package qqx5;
 
 import java.io.File;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
@@ -21,7 +20,9 @@ public class CalcuThread extends Thread {
     public void run() {
         int i = 0;
         for (Map.Entry<File, Integer> entry : linkedHashMap.entrySet()) {
-            process(entry.getKey() , entry.getValue());
+            if (i % threadNum == threadNo) {
+                process(entry.getKey(), entry.getValue());
+            }
             i++;
         }
     }

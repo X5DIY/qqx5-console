@@ -48,14 +48,14 @@ class WriteFireInfo {
                 new Locale("zh", "CN")).format(new Date());
         if (OutMode == 1) {
             for (int i = 0; i < 4; i++) {
-                if (createFile(new File("爆点信息/全信息模式/" + mode[i]), true)) {
+                if (createFile(new File("FireInfo/全信息模式/" + mode[i]), true)) {
                     haveCreated++;
                 }
             }
             if (haveCreated == 4) {
                 System.out.println("创建目录：成功");
             } else {
-                System.out.println("创建目录：失败，请删除\"爆点信息\"文件夹后再试");
+                System.out.println("创建目录：失败，请删除\"FireInfo\"文件夹后再试");
             }
             String[] kinds = new String[3];
             kinds[0] = "基础信息";
@@ -63,7 +63,7 @@ class WriteFireInfo {
             kinds[2] = "两次爆气";
             for (int i = 0; i < 4; i++) {
                 for (int j = 0; j < 3; j++) {
-                    file1[i * 3 + j] = new File("爆点信息/全信息模式/"
+                    file1[i * 3 + j] = new File("FireInfo/全信息模式/"
                             + mode[i] + "/" + kinds[j] + date + ".csv");
                     if (createFile(file1[i * 3 + j], false)) {
                         haveCreated++;
@@ -73,7 +73,7 @@ class WriteFireInfo {
             if (haveCreated == 16) {
                 System.out.println("创建文件：成功");
             } else {
-                System.out.println("创建文件：失败，请删除\"爆点信息\"文件夹后再试");
+                System.out.println("创建文件：失败，请删除\"FireInfo\"文件夹后再试");
             }
         } else if (OutMode == 2) {
             String[] kinds = new String[3];
@@ -81,18 +81,18 @@ class WriteFireInfo {
             kinds[1] = "押爆";
             kinds[2] = "超极限";
             for (int i = 0; i < 3; i++) {
-                if (createFile(new File("爆点信息/爆气表模式/" + kinds[i]), true)) {
+                if (createFile(new File("FireInfo/爆气表模式/" + kinds[i]), true)) {
                     haveCreated++;
                 }
             }
             if (haveCreated == 3) {
                 System.out.println("创建目录：成功");
             } else {
-                System.out.println("创建目录：失败，请删除\"爆点信息\"文件夹后再试");
+                System.out.println("创建目录：失败，请删除\"FireInfo\"文件夹后再试");
             }
             for (int i = 0; i < 4; i++) {
                 for (int j = 0; j < 3; j++) {
-                    file2[i * 3 + j] = new File("爆点信息/爆气表模式/"
+                    file2[i * 3 + j] = new File("FireInfo/爆气表模式/"
                             + kinds[j] + "/" + mode[i] + kinds[j] + date + ".csv");
                     if (createFile(file2[i * 3 + j], false)) {
                         haveCreated++;
@@ -102,7 +102,7 @@ class WriteFireInfo {
             if (haveCreated == 15) {
                 System.out.println("创建文件：成功");
             } else {
-                System.out.println("创建文件：失败，请删除\"爆点信息\"文件夹后再试");
+                System.out.println("创建文件：失败，请删除\"FireInfo\"文件夹后再试");
             }
         }
     }
@@ -113,7 +113,7 @@ class WriteFireInfo {
             if (file.isDirectory() == isDir) {
                 isCreated = true;
             } else {
-                System.out.println("创建文件失败，请删除\"爆点信息\"后再试");
+                System.out.println("创建文件失败，请删除\"FireInfo\"后再试");
             }
         } else {
             if (isDir) {
@@ -467,13 +467,16 @@ class WriteFireInfo {
                         + a.getBoxDescribe(false, true, fireBox2) + div);
                 // WPS 中利用替换功能，可将 ^^^ 替换为换行符，从而达到分割目的
 
-                if (a.isSeparate(isCommon, 0)) {// 分开
-                    StringBuilder doubleCombo2 = new StringBuilder();
-                    for (int num = 0; num < XMLInfo.FireMaxNum; num++) {
-                        if (a.getDoubleScore(isCommon, num) < a.getDoubleScore(isCommon, 0)) {
-                            //除去所有低于最高分的
-                            break;
-                        }
+                StringBuilder doubleCombo2 = new StringBuilder();
+                for (int num = 0; num < XMLInfo.FireMaxNum; num++) {
+                    if (a.getDoubleScore(isCommon, num) < a.getDoubleScore(isCommon, 0)) {
+                        //除去所有低于最高分的，还有空的爆点
+                        break;
+                    }
+                    int fireLength2 = a.isSeparate(isCommon, num)
+                            ? fireLength
+                            : 2 * fireLength - (a.getSt1Box() - a.getDoubleFireBox(isCommon, true, num)) - 4;
+                    if (a.isSeparate(isCommon, num)) {
                         if (a.getStrMode().equals("泡泡")) {
                             doubleCombo2.append(a.combo[a.getDoubleFireBox(isCommon, true, num) + fireLength] + 1).append(" + ")
                                     .append(a.combo[a.getDoubleFireBox(isCommon, false, num) + fireLength] + 1).append("、");
@@ -481,20 +484,7 @@ class WriteFireInfo {
                             doubleCombo2.append(a.combo[a.getDoubleFireBox(isCommon, true, num) + fireLength]).append(" + ")
                                     .append(a.combo[a.getDoubleFireBox(isCommon, false, num) + fireLength]).append("、");
                         }
-                    }
-                    bw.write(doubleCombo2.substring(0, doubleCombo2.toString().length() - 1) + div);
-
-                    bw.write(a.getBoxDescribe(false, false, fireBox1 + fireLength) + "^^^"
-                            + a.getBoxDescribe(false, false, fireBox2 + fireLength) + div);
-                } else {// 存气
-                    StringBuilder doubleCombo2 = new StringBuilder();
-                    for (int num = 0; num < XMLInfo.FireMaxNum; num++) {
-                        //计算对应的第二段长度
-                        int fireLength2 = 2 * fireLength - (a.getSt1Box() - a.getDoubleFireBox(isCommon, true, num)) - 4;
-                        if (a.getDoubleScore(isCommon, num) < a.getDoubleScore(isCommon, 0)) {
-                            //除去所有低于最高分的
-                            break;
-                        }
+                    } else {
                         if (a.getStrMode().equals("泡泡")) {
                             doubleCombo2.append(a.combo[a.getSt1Box()] + 1).append(" + ")
                                     .append(a.combo[a.getDoubleFireBox(isCommon, false, num) + fireLength2] + 1).append("、");
@@ -503,8 +493,13 @@ class WriteFireInfo {
                                     .append(a.combo[a.getDoubleFireBox(isCommon, false, num) + fireLength2]).append("、");
                         }
                     }
-                    bw.write(doubleCombo2.substring(0, doubleCombo2.toString().length() - 1) + div);
+                }
+                bw.write(doubleCombo2.substring(0, doubleCombo2.toString().length() - 1) + div);
 
+                if (a.isSeparate(isCommon, 0)) {// 分开
+                    bw.write(a.getBoxDescribe(false, false, fireBox1 + fireLength) + "^^^"
+                            + a.getBoxDescribe(false, false, fireBox2 + fireLength) + div);
+                } else {// 存气
                     int fireLength2 = 2 * fireLength - (a.getSt1Box() - fireBox1) - 4;
                     bw.write(a.getBoxDescribe(false, false, a.getSt1Box()) + "^^^"
                             + a.getBoxDescribe(false, false, fireBox2 + fireLength2) + div);
@@ -517,23 +512,37 @@ class WriteFireInfo {
             }
 
             int score = a.getSingleScore(isLegend, isCommon, 0);
-            StringBuilder singleCombo = new StringBuilder();
+            StringBuilder singleCombo1 = new StringBuilder();
             for (int num = 0; num < XMLInfo.FireMaxNum; num++) {
                 if (a.getSingleScore(isLegend, isCommon, num) < score) {
                     break;
                 }
                 if (a.getStrMode().equals("泡泡")) {
-                    singleCombo.append(a.combo[a.getSingleFireBox(isLegend, isCommon, num)] + 1).append("、");
+                    singleCombo1.append(a.combo[a.getSingleFireBox(isLegend, isCommon, num)] + 1).append("、");
                 } else {
-                    singleCombo.append(a.combo[a.getSingleFireBox(isLegend, isCommon, num)]).append("、");
+                    singleCombo1.append(a.combo[a.getSingleFireBox(isLegend, isCommon, num)]).append("、");
                 }
             }
-            bw.write(singleCombo.toString().substring(0, singleCombo.toString().length() - 1) + div);
+            bw.write(singleCombo1.substring(0, singleCombo1.toString().length() - 1) + div);
 
             boolean isLegendFireSkill = isLegend && !a.isLimitSkill(true, isCommon, 0);
             int fireBox = a.getSingleFireBox(isLegend, isCommon, 0);
-            bw.write(a.getBoxDescribe(isLegendFireSkill, true, fireBox) + div
-                    + a.getBoxDescribe(isLegendFireSkill, false, fireBox + fireLength) + div);
+            bw.write(a.getBoxDescribe(isLegendFireSkill, true, fireBox) + div);
+
+            StringBuilder singleCombo2 = new StringBuilder();
+            for (int num = 0; num < XMLInfo.FireMaxNum; num++) {
+                if (a.getSingleScore(isLegend, isCommon, num) < score) {
+                    break;
+                }
+                if (a.getStrMode().equals("泡泡")) {
+                    singleCombo2.append(a.combo[a.getSingleFireBox(isLegend, isCommon, num) + fireLength] + 1).append("、");
+                } else {
+                    singleCombo2.append(a.combo[a.getSingleFireBox(isLegend, isCommon, num) + fireLength]).append("、");
+                }
+            }
+            bw.write(singleCombo2.substring(0, singleCombo2.toString().length() - 1) + div);
+
+            bw.write(a.getBoxDescribe(isLegendFireSkill, false, fireBox + fireLength) + div);
 
             bw.write(a.getHalfCombo() + div + a.getSongCombo() + div);
 

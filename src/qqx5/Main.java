@@ -23,11 +23,11 @@ class Main {
             Scanner scanner = new Scanner(System.in).useDelimiter("\n");
             switch (scanner.next()) {
                 case "1":
-                    System.out.println("输入谱面文件路径或其所在文件夹，连接符用 \"/\"");
+                    System.out.println("输入谱面文件路径或其所在文件夹");
                     new CalculateFunction(scanner.next()).calculate();
                     continue;
                 case "2":
-                    System.out.println("输入apk文件路径或bytes文件所在文件夹，连接符用 \"/\"");
+                    System.out.println("输入apk文件路径或bytes文件所在文件夹");
                     String path = scanner.next();
                     if (path.endsWith(".apk")) {
                         new X5APK(path).getAll();
