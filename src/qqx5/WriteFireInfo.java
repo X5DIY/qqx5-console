@@ -487,11 +487,12 @@ class WriteFireInfo {
                     bw.write(a.getBoxDescribe(false, false, fireBox1 + fireLength) + "^^^"
                             + a.getBoxDescribe(false, false, fireBox2 + fireLength) + div);
                 } else {// 存气
-                    int fireLength2 = 2 * fireLength - (a.getSt1Box() - fireBox1) - 4;
-
                     StringBuilder doubleCombo2 = new StringBuilder();
                     for (int num = 0; num < XMLInfo.FireMaxNum; num++) {
+                        //计算对应的第二段长度
+                        int fireLength2 = 2 * fireLength - (a.getSt1Box() - a.getDoubleFireBox(isCommon, true, num)) - 4;
                         if (a.getDoubleScore(isCommon, num) < a.getDoubleScore(isCommon, 0)) {
+                            //除去所有低于最高分的
                             break;
                         }
                         if (a.getStrMode().equals("泡泡")) {
@@ -504,6 +505,7 @@ class WriteFireInfo {
                     }
                     bw.write(doubleCombo2.substring(0, doubleCombo2.toString().length() - 1) + div);
 
+                    int fireLength2 = 2 * fireLength - (a.getSt1Box() - fireBox1) - 4;
                     bw.write(a.getBoxDescribe(false, false, a.getSt1Box()) + "^^^"
                             + a.getBoxDescribe(false, false, fireBox2 + fireLength2) + div);
                 }
